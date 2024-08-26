@@ -9,7 +9,7 @@ export const ProfilePhoto = () => {
       <Image
         src={ellipsel}
         alt="ellipse"
-        className="absolute z-0 right-[23vw] w-[13vw]"
+        className="absolute z-0 right-[22vw] w-[13vw]"
       />
 
       <div className="bg-[linear-gradient(132deg,_#c2c2c2_0%,_#969696_100%)] p-4 shadow shadow-2xl z-10 relative ">

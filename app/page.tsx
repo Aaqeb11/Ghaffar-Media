@@ -10,6 +10,7 @@ import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
 import { GiAsparagus } from "react-icons/gi";
 import { AboutUs } from "@/components/AboutUs";
+import { Companies } from "@/components/Companies";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -138,11 +139,11 @@ export default function Home() {
         />
       </section>
       <section
-        className="flex flex-col items-center pt-10 lg:gap-[14vh] gap-[6vh] min-h-screen"
+        className="flex flex-col items-center  lg:gap-[14vh] gap-[6vh] min-h-screen"
         id="about-sec"
       >
         <div
-          className="flex flex-col items-center gap-4 justify-center lg:justify-start"
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="about"
         >
           <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
@@ -153,6 +154,23 @@ export default function Home() {
         <div className=" flex items-center justify-center" id="about-content">
           <AboutUs />
         </div>
+      </section>
+      <section
+        id="companies"
+        className="flex flex-col items-center min-h-screen  lg:gap-[14vh] gap-[6vh]"
+      >
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="about"
+        >
+          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            COMPANIES
+          </p>
+          <h1 className="text-center text-4xl lg:text-6xl  ">
+            Companies and Clientele
+          </h1>
+        </div>
+        <Companies />
       </section>
     </main>
   );

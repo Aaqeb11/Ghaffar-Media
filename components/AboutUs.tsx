@@ -29,7 +29,7 @@ export const AboutUs = () => {
           current focus, along with my team, is on exploring new markets,
           identifying potential expansion opportunities, and implementing
           strategies to grow our customer base.{" "}
-          <span className="hidden lg:flex lg:pt-2">
+          <span className="hidden lg:flex lg:pt-4">
             My career has been deeply rooted in the service industry, giving me
             a unique understanding of the diverse needs of individuals. This
             experience enables me to connect with people effectively and deliver

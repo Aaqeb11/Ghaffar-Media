@@ -55,7 +55,7 @@ export const data = [
         name: "Ghaffar Media",
         info: "Top media services and products offered by Ghaffar Media",
         bgColor:
-          "linear-gradient(to bottom, #ffffff, #fdf2fc, #ffe2ec, #ffd4d0, #ffccad, #fac899, #f1c685, #e3c572, #e1c067, #dfbc5c, #dcb751, #dab245)",
+          "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(218,178,69,1) 100%)",
       },
     ],
   },
@@ -80,7 +80,7 @@ export const data = [
         name: "National Fast Offer",
         info: "Real estate company offering quotes for you house in minutes",
         bgColor:
-          "linear-gradient(to bottom, #ffffff, #eeeff9, #d9e0f3, #c0d2ee, #a3c5e7, #8ebae1, #77afdb, #5ca5d5, #4a99d0, #388eca, #2382c5, #0076bf)",
+          "linear-gradient(to top, #ffffff, #eeeff9, #d9e0f3, #c0d2ee, #a3c5e7, #8ebae1, #77afdb, #5ca5d5, #4a99d0, #388eca, #2382c5, #0076bf)",
       },
     ],
   },

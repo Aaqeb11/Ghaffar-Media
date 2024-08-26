@@ -54,6 +54,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: "#about-sec",
           start: "top center",
+          toggleActions: "play none none reverse",
           // markers: true,
         },
       });
@@ -61,7 +62,7 @@ export default function Home() {
         xPercent: -100,
         opacity: 0,
         duration: 1.3,
-        delay: 0.8,
+        delay: 0.5,
         scrollTrigger: {
           trigger: "#about-sec",
           start: "top center",

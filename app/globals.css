@@ -58,7 +58,14 @@
     --chart-5: 340 75% 55%;
   }
 }
-
+.gradient-text {
+  background-image: url("../public/gradient.png");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: cover;
+  background-position: center; /* Try adjusting this */
+}
 @layer base {
   * {
     @apply border-border;

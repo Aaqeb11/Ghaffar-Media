@@ -60,14 +60,14 @@ export const Companies: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col gap-4" ref={containerRef}>
+    <div className="flex flex-col gap-4 overflow-x-hidden " ref={containerRef}>
       {data.map((domain: DomainGroup, index: number) => (
         <div
           key={domain.domain}
-          className="flex flex-col mb-8 items-center gap-3 domain-group"
+          className="flex flex-col mb-8 items-center gap-3 domain-group "
         >
           <h1 className="text-3xl font-bold mb-4">{domain.domain}:</h1>
-          <div className="flex lg:flex-row flex-col justify-center gap-4 w-full px-5">
+          <div className="flex lg:flex-row flex-col justify-center gap-4 w-full px-5 items-center">
             {domain.companies.map((company: Company) => (
               <div className="w-full sm:w-[70%] company-card" key={company.id}>
                 <Card

@@ -10,7 +10,11 @@ import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
 import { GiAsparagus } from "react-icons/gi";
 import { AboutUs } from "@/components/AboutUs";
+import { useRouter } from "next/router";
 import { Companies } from "@/components/Companies";
+import { Collaborations } from "@/components/Collaborations";
+import Reviews from "@/components/Reviews";
+import AppointmentForm from "@/components/Appointmentform";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -18,11 +22,6 @@ export default function Home() {
   const scope = useRef(null);
   const t1 = gsap.timeline();
   const t2 = gsap.timeline();
-  // const [isMobile, setIsMobile] = useState(false);
-
-  // useEffect(() => {
-  //   setIsMobile(window.matchMedia("(max-width: 768px)").matches);
-  // }, []);
   const isMobile =
     typeof window !== "undefined" &&
     window.matchMedia("(max-width: 768px)").matches;
@@ -61,11 +60,21 @@ export default function Home() {
       gsap.from("#about-content", {
         xPercent: -100,
         opacity: 0,
-        duration: 1.3,
-        delay: 0.5,
+        duration: 0.8,
         scrollTrigger: {
           trigger: "#about-sec",
           start: "top center",
+          // markers: true,
+        },
+      });
+      gsap.from("#company", {
+        yPercent: -100,
+        opacity: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: "#companies",
+          start: "top center",
+          toggleActions: "play none none reverse",
           // markers: true,
         },
       });
@@ -96,9 +105,7 @@ export default function Home() {
           scrub: 1, // Smooth scrolling effect
           // markers: true, // Remove in production
           onEnter: () => videoAnimation.play(), // Play the animation on entering the viewport
-          onLeaveBack: () => videoAnimation.pause(), // Pause the animation when scrolling back up
-          onEnterBack: () => videoAnimation.play(), // Resume the animation when scrolling back down
-          toggleActions: "play pause resume none", // Define actions based on scroll position
+          toggleActions: "play none none none", // Define actions based on scroll position
           once: true, // Ensure it only plays once
         });
       }
@@ -150,7 +157,7 @@ export default function Home() {
           <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             WHO AM I
           </p>
-          <h1 className="text-center text-4xl lg:text-6xl ">About Us</h1>
+          <h1 className="text-center text-3xl lg:text-6xl ">About Us</h1>
         </div>
         <div className=" flex items-center justify-center" id="about-content">
           <AboutUs />
@@ -162,16 +169,63 @@ export default function Home() {
       >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
-          id="about"
+          id="company"
         >
           <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             COMPANIES
           </p>
-          <h1 className="text-center text-4xl lg:text-6xl  ">
+          <h1 className="text-center text-3xl lg:text-6xl  ">
             Companies and Clientele
           </h1>
         </div>
         <Companies />
+      </section>
+      <section className="flex flex-col items-center min-h-screen  lg:gap-[14vh] gap-[6vh]">
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="company"
+        >
+          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            COLLABORATIONS
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl  ">
+            Our Collaborations
+          </h1>
+        </div>
+        <Collaborations />
+      </section>
+      <section className="py-4 bg-white flex flex-col lg:gap-[14vh] gap-[6vh]">
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="reviews"
+        >
+          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            Reviews
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl">
+            Customer Testimonial
+          </h1>
+        </div>
+        <Reviews />
+      </section>
+
+      <section className=" flex flex-col lg:gap-[14vh] gap-[6vh] py-4">
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="form"
+        >
+          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            PRICING
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl px-1">
+            Ready to invest in your online presence?
+          </h1>
+          <p className="text-sm text-center px-2">
+            Chat with our social media experts on how you can grow with Ghaffar
+            media
+          </p>
+        </div>
+        <AppointmentForm />
       </section>
     </main>
   );

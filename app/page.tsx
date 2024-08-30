@@ -15,7 +15,8 @@ import { useRouter } from "next/router";
 import { Companies } from "@/components/Companies";
 import { Collaborations } from "@/components/Collaborations";
 import Reviews from "@/components/Reviews";
-import AppointmentForm from "@/components/Appointmentform";
+import AppointmentForm from "@/components/AppointmentForm";
+import Events from "@/components/Events";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -183,6 +184,32 @@ export default function Home() {
           </h1>
         </div>
         <Companies />
+      </section>
+      <section
+        className=" flex flex-col lg:gap-[14vh] gap-[6vh] overflow-hidden"
+        id="pricing"
+      >
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="form"
+        >
+          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            Events
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl px-1">
+            The events we host
+          </h1>
+          <p
+          className="text-lg lg:text-xl text-justify  px-12"
+          style={{ lineHeight: "1.85" }}
+        >
+          At the heart of our enterprises is a strong commitment to community and collaboration, and this is best exemplified through our dynamic events. Our events are not just gatherings but curated experiences where entrepreneurs, investors, and professionals from various industries come together to share knowledge, forge connections, and explore new opportunities. Hosted by our visionary leader, these events serve as a platform for promoting the innovative solutions we offer across our diverse range of companies, including lead generation, real estate wholesaling, marketing, coaching, and more.{" "}
+          <span className="hidden lg:flex lg:pt-4">
+          We invite you to browse through the moments captured at our events, where you’ll see our team and clients engaging in meaningful conversations, brainstorming the next big idea, and laying the groundwork for future collaborations. Join us at our next event and become a part of this thriving network.
+          </span>
+        </p>
+        </div>
+        <Events />
       </section>
       <section className="flex flex-col items-center lg:min-h-screen  lg:gap-[14vh] gap-[6vh] overflow-hidden">
         <div

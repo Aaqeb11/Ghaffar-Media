@@ -66,6 +66,50 @@
   background-size: cover;
   background-position: center; /* Try adjusting this */
 }
+.slider-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  animation: slide 50s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slide {
+  flex: 0 0 25%; /* Default size for larger screens */
+  max-width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh; /* Default height for larger screens */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 50%; /* Increase slide size on mobile */
+    max-width: 50%;
+    height: 50vh; /* Increase height to take up half the screen on mobile */
+  }
+}
+
+.slide img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
 @layer base {
   * {
     @apply border-border;

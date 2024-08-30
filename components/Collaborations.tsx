@@ -7,7 +7,7 @@ export const Collaborations = () => {
       {data.map((collab) => (
         <div
           key={collab.id}
-          className="relative w-full md:w-[45vw] md:h-[45vh] h-[54vw]" // Adjust the height for mobile
+          className="relative w-full lg:w-[45vw] lg:h-[45vh] md:w-[35vw] md:h-[20vh] h-[54vw]" // Adjust the height for mobile
         >
           <iframe
             className="absolute top-0 left-0 w-full h-full rounded-lg"

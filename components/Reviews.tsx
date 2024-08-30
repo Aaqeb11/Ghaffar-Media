@@ -37,7 +37,7 @@ export default function Reviews() {
         return (
           <div
             key={index}
-            className="flex flex-col bg-white rounded-xl items-center gap-[4vh] lg:gap-[8vh] lg:w-[52vw] lg:h-[60vh] mx-auto p-10 h-[55vh] w-[80%] border border-red-500 shadow-md shadow-black"
+            className="flex flex-col bg-white rounded-xl items-center gap-[4vh] lg:gap-[8vh] lg:w-[52vw] lg:h-[60vh] mx-auto p-10 md:h-[30vh] h-[55vh] w-[80%] border border-red-500 shadow-md shadow-black"
           >
             <div className="text-red-500 text-6xl lg:text-8xl self-start ml-4">
               <span>&ldquo;</span>

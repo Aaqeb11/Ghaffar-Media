@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,6 +10,9 @@ type FormFields = {
   description: string;
 };
 const AppointmentForm = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const {
     register,
     handleSubmit,
@@ -38,7 +41,7 @@ const AppointmentForm = () => {
 
   return (
     <form
-      className="flex flex-col md:w-[70%] w-[90%] mx-auto space-y-4"
+      className="flex flex-col w-[90%] mx-auto space-y-4"
       onSubmit={handleSubmit(onSubmit)}
     >
       <input

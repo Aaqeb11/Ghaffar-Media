@@ -3,6 +3,7 @@ import Image from "next/image";
 import gradient from "../public/gradient.png";
 import video from "../public/video.jpeg";
 import { Clients } from "@/data/Clients";
+import dynamic from "next/dynamic";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -21,7 +22,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const scope = useRef(null);
   const t1 = gsap.timeline();
-  const t2 = gsap.timeline();
   const isMobile =
     typeof window !== "undefined" &&
     window.matchMedia("(max-width: 768px)").matches;
@@ -52,7 +52,7 @@ export default function Home() {
         duration: 1,
         scrollTrigger: {
           trigger: "#about-sec",
-          start: "top center",
+          start: "-230px center",
           toggleActions: "play none none reverse",
           // markers: true,
         },
@@ -114,17 +114,20 @@ export default function Home() {
   );
 
   return (
-    <main className="" ref={scope} id="#scroll-smoother">
-      <section className="flex flex-col items-center p-4 lg:mt-[100px] mt-[20px] gap-8 min-h-[calc(100vh-30vh)] lg:h-auto">
+    <main className="mt-20 " ref={scope} id="#scroll-smoother">
+      <section
+        className="flex flex-col items-center p-4 lg:mt-[150px] mt-[30px] gap-8 md:gap-20 min-h-[calc(100vh-30vh)] lg:h-auto scroll-mt-20"
+        id="home"
+      >
         <div className="flex flex-col items-center" id="intro">
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-6 md:gap-12">
             <p
               className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-5 py-1 rounded-2xl "
               id="limited"
             >
               LIMITED SPOTS
             </p>
-            <h1 className="lg:text-9xl text-4xl font-medium gradient-text text-center">
+            <h1 className="lg:text-9xl text-4xl md:text-7xl font-medium gradient-text text-center">
               Ghaffar Enterprises
             </h1>
           </div>
@@ -143,15 +146,16 @@ export default function Home() {
           src={video}
           id="video"
           alt="bg-video"
-          className="lg:w-[59vw] lg:h-[78vh]"
+          className="lg:w-[59vw] lg:h-[78vh] rounded-lg"
+          priority
         />
       </section>
       <section
-        className="flex flex-col items-center  lg:gap-[14vh] gap-[6vh] min-h-screen"
+        className="flex flex-col items-center  lg:gap-[14vh] gap-[6vh] min-h-screen overflow-hidden"
         id="about-sec"
       >
         <div
-          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh] "
           id="about"
         >
           <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
@@ -165,7 +169,7 @@ export default function Home() {
       </section>
       <section
         id="companies"
-        className="flex flex-col items-center min-h-screen  lg:gap-[14vh] gap-[6vh]"
+        className="flex flex-col items-center min-h-screen  lg:gap-[14vh] gap-[6vh] overflow-hidden"
       >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
@@ -180,7 +184,7 @@ export default function Home() {
         </div>
         <Companies />
       </section>
-      <section className="flex flex-col items-center min-h-screen  lg:gap-[14vh] gap-[6vh]">
+      <section className="flex flex-col items-center lg:min-h-screen  lg:gap-[14vh] gap-[6vh] overflow-hidden">
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="company"
@@ -194,7 +198,7 @@ export default function Home() {
         </div>
         <Collaborations />
       </section>
-      <section className="py-4 bg-white flex flex-col lg:gap-[14vh] gap-[6vh]">
+      <section className="bg-white flex flex-col lg:gap-[14vh] gap-[6vh] overflow-hidden">
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="reviews"
@@ -209,7 +213,10 @@ export default function Home() {
         <Reviews />
       </section>
 
-      <section className=" flex flex-col lg:gap-[14vh] gap-[6vh] py-4">
+      <section
+        className=" flex flex-col lg:gap-[14vh] gap-[6vh] overflow-hidden"
+        id="pricing"
+      >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="form"

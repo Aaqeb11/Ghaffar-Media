@@ -17,6 +17,7 @@ import { Collaborations } from "@/components/Collaborations";
 import Reviews from "@/components/Reviews";
 import AppointmentForm from "@/components/AppointmentForm";
 import Events from "@/components/Events";
+import { Footer } from "@/components/Footer";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -272,13 +273,14 @@ export default function Home() {
           <h1 className="text-center text-3xl lg:text-6xl px-1">
             Ready to invest in your online presence?
           </h1>
-          <p className="text-sm text-center px-2">
+          <p className="md:text-lg text-sm text-center px-2">
             Chat with our social media experts on how you can grow with Ghaffar
             media
           </p>
         </div>
         <AppointmentForm />
       </section>
+      <Footer />
     </main>
   );
 }

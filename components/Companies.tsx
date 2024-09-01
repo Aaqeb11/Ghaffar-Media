@@ -80,6 +80,7 @@ export const Companies: React.FC = () => {
                         src={company.image}
                         alt={`${company.name} logo`}
                         className="lg:w-[20vw] lg:h-[20vh] w-[40vw] h-[10vh] object-contain mx-auto"
+                        priority
                       />
                     ) : (
                       <div className="lg:w-[20vw] lg:h-[20vh] w-[40vw] h-[10vh] flex items-center justify-center text-[#D72323]">

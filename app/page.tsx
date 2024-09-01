@@ -15,7 +15,8 @@ import { useRouter } from "next/router";
 import { Companies } from "@/components/Companies";
 import { Collaborations } from "@/components/Collaborations";
 import Reviews from "@/components/Reviews";
-import AppointmentForm from "@/components/Appointmentform";
+import AppointmentForm from "@/components/AppointmentForm";
+import Events from "@/components/Events";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -116,13 +117,16 @@ export default function Home() {
   return (
     <main className="mt-20 " ref={scope} id="#scroll-smoother">
       <section
-        className="flex flex-col items-center p-4 lg:mt-[150px] mt-[30px] gap-8 md:gap-20 min-h-[calc(100vh-30vh)] lg:h-auto scroll-mt-20"
+        className="flex flex-col items-center p-4  gap-8 md:gap-20 min-h-[calc(100vh-30vh)] lg:h-auto scroll-mt-20"
         id="home"
       >
-        <div className="flex flex-col items-center" id="intro">
+        <div
+          className="flex flex-col items-center  lg:mt-[50px] mt-[30px]"
+          id="intro"
+        >
           <div className="flex flex-col items-center gap-6 md:gap-12">
             <p
-              className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-5 py-1 rounded-2xl "
+              className="text-[#D72323] text-center border-[1px] border-[#D72323] px-5 py-1 rounded-2xl "
               id="limited"
             >
               LIMITED SPOTS
@@ -151,14 +155,14 @@ export default function Home() {
         />
       </section>
       <section
-        className="flex flex-col items-center  lg:gap-[14vh] gap-[6vh] min-h-screen overflow-hidden"
+        className="flex flex-col items-center  lg:gap-[6vh] gap-[6vh] min-h-screen overflow-hidden"
         id="about-sec"
       >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh] "
           id="about"
         >
-          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             WHO AM I
           </p>
           <h1 className="text-center text-3xl lg:text-6xl ">About Us</h1>
@@ -169,13 +173,13 @@ export default function Home() {
       </section>
       <section
         id="companies"
-        className="flex flex-col items-center min-h-screen  lg:gap-[14vh] gap-[6vh] overflow-hidden"
+        className="flex flex-col items-center min-h-screen  lg:gap-[6vh] gap-[6vh] overflow-hidden scroll-mt-6"
       >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="company"
         >
-          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             COMPANIES
           </p>
           <h1 className="text-center text-3xl lg:text-6xl  ">
@@ -184,12 +188,53 @@ export default function Home() {
         </div>
         <Companies />
       </section>
-      <section className="flex flex-col items-center lg:min-h-screen  lg:gap-[14vh] gap-[6vh] overflow-hidden">
+      <section
+        className="min-h-screen flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
+        id="events"
+      >
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="event"
+        >
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            EVENTS
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl  ">
+            The Events We Host
+          </h1>
+        </div>
+        <div className="flex flex-col gap-8">
+          <p
+            className="text-lg lg:text-xl text-justify  md:px-14 px-7 "
+            style={{ lineHeight: "1.85" }}
+          >
+            At the heart of our enterprises is a strong commitment to community
+            and collaboration, and this is best exemplified through our dynamic
+            events. Our events are not just gatherings but curated experiences
+            where entrepreneurs, investors, and professionals from various
+            industries come together to share knowledge, forge connections, and
+            explore new opportunities.{" "}
+            <span className="hidden md:flex md:pt-4">
+              Hosted by our visionary leader, these events serve as a platform
+              for promoting the innovative solutions we offer across our diverse
+              range of companies, including lead generation, real estate
+              wholesaling, marketing, coaching, and more. We invite you to
+              browse through the moments captured at our events, where you’ll
+              see our team and clients engaging in meaningful conversations,
+              brainstorming the next big idea, and laying the groundwork for
+              future collaborations. Join us at our next event and become a part
+              of this thriving network.
+            </span>
+          </p>
+          <Events />
+        </div>
+      </section>
+      <section className="flex flex-col items-center lg:min-h-screen  lg:gap-[6vh] gap-[6vh] overflow-hidden">
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="company"
         >
-          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider items-center">
             COLLABORATIONS
           </p>
           <h1 className="text-center text-3xl lg:text-6xl  ">
@@ -198,12 +243,12 @@ export default function Home() {
         </div>
         <Collaborations />
       </section>
-      <section className="bg-white flex flex-col lg:gap-[14vh] gap-[6vh] overflow-hidden">
+      <section className="bg-white flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden">
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="reviews"
         >
-          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             Reviews
           </p>
           <h1 className="text-center text-3xl lg:text-6xl">
@@ -214,14 +259,14 @@ export default function Home() {
       </section>
 
       <section
-        className=" flex flex-col lg:gap-[14vh] gap-[6vh] overflow-hidden"
+        className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
         id="pricing"
       >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="form"
         >
-          <p className="text-[#D72323] flex justify-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             PRICING
           </p>
           <h1 className="text-center text-3xl lg:text-6xl px-1">

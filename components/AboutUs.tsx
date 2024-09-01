@@ -6,7 +6,7 @@ import abdullah2 from "../public/abdullah2.png";
 import { ProfilePhoto } from "./ProfilePhoto";
 export const AboutUs = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center justify-between mx-5  lg:mx-20 gap-14">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-5  lg:px-16 gap-14">
       <div className="flex flex-col gap-6  lg:items-start items-center">
         <h1 className="flex gap-2 text-3xl lg:text-4xl">
           Meet{" "}
@@ -16,6 +16,7 @@ export const AboutUs = () => {
               src={underline}
               alt="underline"
               className="lg:w-full w-[90px]"
+              priority
             />
           </span>{" "}
         </h1>

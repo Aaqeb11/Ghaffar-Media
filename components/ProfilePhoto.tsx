@@ -26,6 +26,7 @@ export const ProfilePhoto = () => {
           alt="abdullah"
           className="rounded-lg z-10"
           style={{ width: "100%" }} // Image width is relative to the parent div
+          priority
         />
       </div>
 

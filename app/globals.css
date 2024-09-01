@@ -68,14 +68,15 @@
 }
 .slider-container {
   width: 100%;
-  height: 100%;
+  height: 40vh;
   overflow: hidden;
   position: relative;
 }
 
 .slider {
   display: flex;
-  animation: slide 50s linear infinite;
+  animation: slide 100s linear infinite;
+  height: 100%;
 }
 
 @keyframes slide {
@@ -88,28 +89,33 @@
 }
 
 .slide {
-  flex: 0 0 25%; /* Default size for larger screens */
+  flex: 0 0 25%;
   max-width: 25%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh; /* Default height for larger screens */
 }
 
-/* Media query for mobile devices */
+@media (max-width: 1080px) {
+  .slide {
+    flex: 0 0 45%; /* Changed from 100% to 50% */
+    max-width: 45%; /* Changed from 100% to 50% */
+  }
+}
 @media (max-width: 768px) {
   .slide {
-    flex: 0 0 50%; /* Increase slide size on mobile */
-    max-width: 50%;
-    height: 50vh; /* Increase height to take up half the screen on mobile */
+    flex: 0 0 80%; /* Changed from 100% to 50% */
+    max-width: 80%; /* Changed from 100% to 50% */
+  }
+  .slider {
+    animation: slide 25s linear infinite;
+  }
+  .slider-container {
+    height: 40vh;
   }
 }
 
-.slide img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-}
 @layer base {
   * {
     @apply border-border;

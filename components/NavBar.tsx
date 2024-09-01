@@ -7,6 +7,8 @@ import { IoMdClose } from "react-icons/io";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Router } from "next/router";
+import Link from "next/link";
 
 const NavBar = () => {
   const items = [
@@ -78,11 +80,16 @@ const NavBar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white z-50 h-[70px] lg:h-[80px] shadow-md shadow-gray-300">
       <div className="container mx-auto h-full flex justify-between items-center px-4">
-        <Image
-          src={logo}
-          alt="logo"
-          className="h-[55px] w-auto object-contain"
-        />
+        <Link href="/" passHref>
+          <div className="inline-block">
+            <Image
+              src={logo}
+              alt="logo"
+              className="h-[55px] w-auto object-contain hover:cursor-pointer"
+              priority
+            />
+          </div>
+        </Link>
         <div className="flex items-center lg:hidden">
           <button
             onClick={() => toggleMenu()}
@@ -120,7 +127,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-[#D72323] shadow-lg transform transition-transform duration-300 ease-in-out z-50  ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50  ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
@@ -131,14 +138,14 @@ const NavBar = () => {
               className="text-2xl"
               aria-label="Close menu"
             >
-              <IoMdClose className="text-black text-4xl" />
+              <IoMdClose className="text-[#D72323] text-4xl" />
             </button>
           </div>
           <div className="flex flex-col gap-14 p-4 overflow-hidden">
             {items.map((item, index) => (
               <div className="relative" key={index}>
                 <div
-                  className="bg-black absolute top-0 left-0 w-full h-full z-10 rounded-lg"
+                  className="bg-[#D72323] absolute top-0 left-0 w-full h-full z-10 rounded-lg"
                   ref={(el) => {
                     menuItemsRef.current[index] = el;
                   }}
@@ -153,7 +160,7 @@ const NavBar = () => {
             ))}
           </div>
           <div className="p-4">
-            <button className="w-full border-[1px] border-black py-3 rounded-xl text-lg font-medium bg-white text-[#D72323] font-bold hover:bg-[#D72323] hover:text-white transition duration-300">
+            <button className="w-full bg-[#D72323] border-[1px] border-black py-3 rounded-xl text-lg font-medium text-white font-bold hover:bg-[#D72323] hover:text-white transition duration-300">
               Contact
             </button>
           </div>

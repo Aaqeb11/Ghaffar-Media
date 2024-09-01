@@ -18,6 +18,7 @@ import Reviews from "@/components/Reviews";
 import AppointmentForm from "@/components/AppointmentForm";
 import Events from "@/components/Events";
 import { Footer } from "@/components/Footer";
+import HowItWorks from "@/components/HowItWorks";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -332,7 +333,23 @@ export default function Home() {
         </div>
         <Reviews />
       </section>
-
+      <section
+        id="companies"
+        className="flex flex-col items-center min-h-screen  lg:gap-[6vh] gap-[6vh] overflow-hidden scroll-mt-6"
+      >
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="company"
+        >
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            AFFILIATE LINKS 
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl  ">
+            Claim Benifits Using These Links
+          </h1>
+        </div>
+        <HowItWorks />
+      </section>
       <section
         className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
         id="pricing-sec"

@@ -42,10 +42,10 @@ export const Footer = () => {
         <div className="flex  items-center justify-center gap-8">
           <div className="flex flex-col justify-between gap-4">
             <Link href="mailto:info@ghaffarenterprises ">
-              <IoMailOutline className="text-[#D72323] md:text-3xl text-2xl" />
+              <IoMailOutline className="text-[#D72323] md:text-3xl text-2xl animate-pulse" />
             </Link>
             <Link href="tel:+1 (630) 526-4000">
-              <MdOutlinePhoneInTalk className="text-[#D72323] md:text-3xl text-2xl " />
+              <MdOutlinePhoneInTalk className="text-[#D72323] md:text-3xl text-2xl animate-pulse" />
             </Link>
           </div>
           <div className="flex flex-col justify-between gap-4">

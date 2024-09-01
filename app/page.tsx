@@ -80,6 +80,74 @@ export default function Home() {
           // markers: true,
         },
       });
+      gsap.from("#events", {
+        yPercent: -100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#events-sec",
+          start: "-230px center",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
+      gsap.from("#event-content", {
+        xPercent: -100,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: "#events-sec",
+          start: "-230px center",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
+      gsap.from("#collaboration", {
+        yPercent: -100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#collaboration-sec",
+          start: "-230px center",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
+      gsap.from("#reviews", {
+        yPercent: -100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#reviews-sec",
+          start: "-230px center",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
+      gsap.from("#pricing", {
+        yPercent: -100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#pricing-sec",
+          start: "-230px center",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
+      gsap.from("#form", {
+        xPercent: -100,
+        opacity: 0,
+        duration: 1.3,
+        delay: 0.4,
+        scrollTrigger: {
+          trigger: "#pricing-sec",
+          start: "-230px center",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
 
       if (isMobile) {
         // Mobile animation: simple fade in for the video element
@@ -191,11 +259,11 @@ export default function Home() {
       </section>
       <section
         className="min-h-screen flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
-        id="events"
+        id="events-sec"
       >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
-          id="event"
+          id="events"
         >
           <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             EVENTS
@@ -204,7 +272,7 @@ export default function Home() {
             The Events We Host
           </h1>
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8" id="event-content">
           <p
             className="text-lg lg:text-xl text-justify  md:px-14 px-7 "
             style={{ lineHeight: "1.85" }}
@@ -230,10 +298,13 @@ export default function Home() {
           <Events />
         </div>
       </section>
-      <section className="flex flex-col items-center lg:min-h-screen  lg:gap-[6vh] gap-[6vh] overflow-hidden">
+      <section
+        className="flex flex-col items-center lg:min-h-screen  lg:gap-[6vh] gap-[6vh] overflow-hidden"
+        id="collaboration-sec"
+      >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
-          id="company"
+          id="collaboration"
         >
           <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider items-center">
             COLLABORATIONS
@@ -244,7 +315,10 @@ export default function Home() {
         </div>
         <Collaborations />
       </section>
-      <section className="bg-white flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden">
+      <section
+        className="bg-white flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
+        id="reviews-sec"
+      >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
           id="reviews"
@@ -261,11 +335,11 @@ export default function Home() {
 
       <section
         className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
-        id="pricing"
+        id="pricing-sec"
       >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
-          id="form"
+          id="pricing"
         >
           <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             PRICING
@@ -278,7 +352,9 @@ export default function Home() {
             media
           </p>
         </div>
-        <AppointmentForm />
+        <div id="form">
+          <AppointmentForm />
+        </div>
       </section>
       <Footer />
     </main>

@@ -111,7 +111,7 @@ const NavBar = () => {
           ))}
         </div>
         <div className="hidden lg:block">
-          <button className="border-[1px] border-black px-6 py-2 rounded-xl text-lg font-medium bg-[#D72323] text-white font-bold hover:bg-white hover:text-[#D72323] transition duration-300">
+          <button className="border-[1px] border-gray-300 px-6 py-2 rounded-xl text-lg font-medium bg-[#D72323] text-white font-bold  hover:border-[#D72323] hover:bg-white hover:text-[#D72323] transition duration-300">
             Contact
           </button>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import gradient from "../public/gradient.png";
-import video from "../public/video.jpeg";
+// import video from "../public/video.jpeg";
 import { Clients } from "@/data/Clients";
 import dynamic from "next/dynamic";
 import { gsap } from "gsap";
@@ -130,6 +130,7 @@ export default function Home() {
         yPercent: -100,
         opacity: 0,
         duration: 1.3,
+        delay: 0.3,
         scrollTrigger: {
           trigger: "#affiliate-sec",
           start: "-230px center",
@@ -207,7 +208,14 @@ export default function Home() {
     },
     { scope: scope }
   );
-
+  const SectionScroll = (targetSectionId: string) => {
+    if (targetSectionId) {
+      const section = document.getElementById(targetSectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <main className="mt-20 " ref={scope} id="#scroll-smoother">
       <section
@@ -237,15 +245,20 @@ export default function Home() {
         <button
           className="border-[1px] border-white shadow-lg shadow-gray-300 px-6 py-4 rounded-xl text-xl  bg-[#D72323] text-white font-bold hover:bg-[white] hover:border-[1px] hover:border-[#D72323] hover:text-black hover:transition hover:duration-500"
           id="button"
+          onClick={() => {
+            SectionScroll("pricing");
+          }}
         >
           Book a call for free
         </button>
-        <Image
-          src={video}
+        <video
+          src="/GhaffarReel.mp4"
           id="video"
-          alt="bg-video"
+          controls
+          autoPlay
+          muted
+          loop
           className="lg:w-[59vw] lg:h-[78vh] rounded-lg"
-          priority
         />
       </section>
       <section

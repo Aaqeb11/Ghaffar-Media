@@ -7,7 +7,7 @@ import { IoMdClose } from "react-icons/io";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Router } from "next/router";
+import { Router, useRouter } from "next/router";
 import Link from "next/link";
 
 const NavBar = () => {
@@ -111,7 +111,10 @@ const NavBar = () => {
           ))}
         </div>
         <div className="hidden lg:block">
-          <button className="border-[1px] border-gray-300 px-6 py-2 rounded-xl text-lg font-medium bg-[#D72323] text-white font-bold  hover:border-[#D72323] hover:bg-white hover:text-[#D72323] transition duration-300">
+          <button
+            className="border-[1px] border-gray-300 px-6 py-2 rounded-xl text-lg font-medium bg-[#D72323] text-white font-bold  hover:border-[#D72323] hover:bg-white hover:text-[#D72323] transition duration-300"
+            onClick={() => SectionScroll("pricing")}
+          >
             Contact
           </button>
         </div>
@@ -160,7 +163,13 @@ const NavBar = () => {
             ))}
           </div>
           <div className="p-4">
-            <button className="w-full bg-[#D72323] border-[1px] border-black py-3 rounded-xl text-lg font-medium text-white font-bold hover:bg-[#D72323] hover:text-white transition duration-300">
+            <button
+              className="w-full bg-[#D72323] border-[1px] border-black py-3 rounded-xl text-lg font-medium text-white font-bold hover:bg-[#D72323] hover:text-white transition duration-300"
+              onClick={() => {
+                toggleMenu();
+                SectionScroll("pricing");
+              }}
+            >
               Contact
             </button>
           </div>

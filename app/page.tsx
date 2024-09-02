@@ -18,7 +18,7 @@ import Reviews from "@/components/Reviews";
 import AppointmentForm from "@/components/AppointmentForm";
 import Events from "@/components/Events";
 import { Footer } from "@/components/Footer";
-import HowItWorks from "@/components/HowItWorks";
+import Affiliate from "@/components/Affiliate";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -126,6 +126,29 @@ export default function Home() {
           // markers: true,
         },
       });
+      gsap.from("#affiliate", {
+        yPercent: -100,
+        opacity: 0,
+        duration: 1.3,
+        scrollTrigger: {
+          trigger: "#affiliate-sec",
+          start: "-230px center",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
+      gsap.from("#affiliate-content", {
+        xPercent: 100,
+        opacity: 0,
+        duration: 1.3,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: "#affiliate-sec",
+          start: "-230px center",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
       gsap.from("#pricing", {
         yPercent: -100,
         opacity: 0,
@@ -137,6 +160,7 @@ export default function Home() {
           // markers: true,
         },
       });
+
       gsap.from("#form", {
         xPercent: -100,
         opacity: 0,
@@ -334,21 +358,23 @@ export default function Home() {
         <Reviews />
       </section>
       <section
-        id="companies"
+        id="affiliate-sec"
         className="flex flex-col items-center min-h-screen  lg:gap-[6vh] gap-[6vh] overflow-hidden scroll-mt-6"
       >
         <div
           className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
-          id="company"
+          id="affiliate"
         >
           <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
-            AFFILIATE LINKS 
+            AFFILIATE LINKS
           </p>
           <h1 className="text-center text-3xl lg:text-6xl  ">
-            Claim Benifits Using These Links
+            Unlock Benefits
           </h1>
         </div>
-        <HowItWorks />
+        <div id="affiliate-content">
+          <Affiliate />
+        </div>
       </section>
       <section
         className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"

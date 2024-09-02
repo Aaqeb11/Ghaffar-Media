@@ -4,52 +4,28 @@ import "react-multi-carousel/lib/styles.css";
 const Affiliate = () => {
   const slides = [
     {
-      title: "Akcallers",
+      title: "Kind Skiptracing",
       description:
-        "Fill out our form or call us to inquire about services and available slots.",
-      link: "https://xcellenttires.com/", // Link for the first card
+        "Earn Passive Income From Kind Products Use Our Referral Code to avail benifits. ReferralCode=ihustlebro",
+      link: "http://kindskiptracing.com/affiliate-program", // Link for the first card
     },
     {
-      title: "2",
+      title: "Resimpli",
       description:
-        "Provide details about your vehicle, and we will give you a personalized quote.",
-      link: "/quote", // Link for the second card
+        "We Help Real Estate Investors Close More Deals , click here to avail benifits.",
+      link: "https://resimpli.com/ihustlebro", // Link for the second card
     },
     {
-      title: "3",
+      title: "PropStreamPro",
       description:
-        "Choose a convenient time for your service, and we’ll reserve a slot for you.",
-      link: "/schedule", // Link for the third card
+        "Targeted Lead Generation with Data Powered by PropStream , click here to avail benifits. ",
+      link: "https://trial.propstreampro.com/ihustlebro", // Link for the third card
     },
     {
-      title: "4",
+      title: "Investor Lift",
       description:
-        "Bring your car in at the scheduled time, our expert technicians will handle it.",
-      link: "/service", // Link for the fourth card
-    },
-    {
-      title: "1",
-      description:
-        "Fill out our form or call us to inquire about services and available slots.",
-      link: "https://xcellenttires.com/", // Link for the first card
-    },
-    {
-      title: "2",
-      description:
-        "Provide details about your vehicle, and we will give you a personalized quote.",
-      link: "/quote", // Link for the second card
-    },
-    {
-      title: "3",
-      description:
-        "Choose a convenient time for your service, and we’ll reserve a slot for you.",
-      link: "/schedule", // Link for the third card
-    },
-    {
-      title: "4",
-      description:
-        "Bring your car in at the scheduled time, our expert technicians will handle it.",
-      link: "/service", // Link for the fourth card
+        "We give wholesalers a disproportionate advantage , click here to avail benifits.",
+      link: "http://get.investorlift.com/ihustlebro", // Link for the fourth card
     },
   ];
 
@@ -62,6 +38,7 @@ const Affiliate = () => {
             <a
               key={index}
               href={data.link}
+              target="_blank"
               className="mb-8 p-6 bg-white rounded-xl text-center block transition-transform duration-300 hover:scale-105 hover:shadow-lg border border-10 border-[#D72323] shadow-lg"
             >
               <h2 className="text-black text-4xl font-bold mb-4">

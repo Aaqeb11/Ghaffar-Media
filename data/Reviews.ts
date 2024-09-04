@@ -11,9 +11,5 @@ export const reviews = [
       title: "AK Callers User",
       text: "I've actually got a contract in the first month from AK Callers, It feels like really good communication",
     },
-    {
-      title: "Tim Cook",
-      text: "Outstanding customer service! The team went above and beyond to ensure my vehicle was repaired quickly and correctly.",
-    },
   ];
   

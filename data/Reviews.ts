@@ -1,15 +1,15 @@
 export const reviews = [
     {
-      title: "Alex",
-      text: "The service at Xcellent Auto Repair was exceptional. The staff was friendly and the repairs were done promptly. Highly recommend!",
+      title: "Azaan",
+      text: "Abdullah's course and training has been wonderfull. Thank you for having me and thank you for all the wisdom man.",
     },
     {
-      title: "Faizan",
-      text: "I had a great experience with Xcellent Auto Repair. They were transparent about the repairs and the costs. My car has never run better!",
+      title: "Mr.Melvin",
+      text: "I had one of the greatest experience ever, The way they went about handling the situation making and pain free.",
     },
     {
-      title: "Farhan",
-      text: "Xcellent Auto Repair is the place to go for reliable and honest auto repair. The technicians are skilled and professional.",
+      title: "AK Callers User",
+      text: "I've actually got a contract in the first month from AK Callers, It feels like really good communication",
     },
     {
       title: "Tim Cook",

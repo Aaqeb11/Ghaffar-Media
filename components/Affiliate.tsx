@@ -6,31 +6,35 @@ const Affiliate = () => {
     {
       title: "Kind Skiptracing",
       description:
-        "Earn Passive Income From Kind Products Use Our Referral Code to avail benifits. ReferralCode=ihustlebro",
-      link: "http://kindskiptracing.com/affiliate-program", // Link for the first card
+        "Earn Passive Income From Kind Products Use Our Referral Code to avail benefits. ReferralCode=ihustlebro",
+      link: "http://kindskiptracing.com/affiliate-program",
+      backgroundImage: "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(247,103,7,1) 100%)",
     },
     {
       title: "Resimpli",
       description:
-        "We Help Real Estate Investors Close More Deals , click here to avail benifits.",
-      link: "https://resimpli.com/ihustlebro", // Link for the second card
+        "We Help Real Estate Investors Close More Deals, click here to avail benefits.",
+      link: "https://resimpli.com/ihustlebro",
+      backgroundImage: "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(40,153,133,1) 100%)",
     },
     {
       title: "PropStreamPro",
       description:
-        "Targeted Lead Generation with Data Powered by PropStream , click here to avail benifits. ",
-      link: "https://trial.propstreampro.com/ihustlebro", // Link for the third card
+        "Targeted Lead Generation with Data Powered by PropStream, click here to avail benefits.",
+      link: "https://trial.propstreampro.com/ihustlebro",
+      backgroundImage: "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,138,255,1) 100%)",
     },
     {
       title: "Investor Lift",
       description:
-        "We give wholesalers a disproportionate advantage , click here to avail benifits.",
-      link: "http://get.investorlift.com/ihustlebro", // Link for the fourth card
+        "We give wholesalers a disproportionate advantage, click here to avail benefits.",
+      link: "http://get.investorlift.com/ihustlebro",
+      backgroundImage: "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,95,255,1) 100%)",
     },
   ];
 
   return (
-    <div className="relative w-full  flex flex-col items-center gap-[12vh] bg-white text-white">
+    <div className="relative w-full flex flex-col items-center gap-[12vh] bg-white text-white">
       <div className="flex items-center justify-center gap-2 pt-8 relative z-10">
         {/* Vertical cards for mobile devices */}
         <div className="block lg:hidden w-full px-4">
@@ -39,9 +43,10 @@ const Affiliate = () => {
               key={index}
               href={data.link}
               target="_blank"
-              className="mb-8 p-6 bg-white rounded-xl text-center block transition-transform duration-300 hover:scale-105 hover:shadow-lg border border-10 border-[#D72323] shadow-lg"
+              className="mb-8 p-6 rounded-xl text-center block transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-10 border-black shadow-2xl"
+              style={{ backgroundImage: data.backgroundImage }}
             >
-              <h2 className="text-black text-4xl font-bold mb-4">
+              <h2 className="text-black text-4xl  mb-4">
                 {data.title}
               </h2>
               <p className="text-black text-xl">{data.description}</p>
@@ -56,9 +61,10 @@ const Affiliate = () => {
               key={index}
               href={slide.link}
               target="_blank"
-              className="w-64 h-80 bg-white m-4 flex flex-col gap-16 pt-5 items-center text-black transition-transform duration-300 hover:scale-105 hover:shadow-lg rounded-xl border border-10 border-[#D72323] shadow-lg"
+              className="w-64 h-80 m-4 flex flex-col gap-16 pt-5 items-center text-black transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl border border-3 border-black shadow-2xl"
+              style={{ backgroundImage: slide.backgroundImage }}
             >
-              <h2 className="text-3xl font-bold mb-2">{slide.title}</h2>
+              <h2 className="text-3xl mb-2">{slide.title}</h2>
               <p className="text-center mx-4">{slide.description}</p>
             </a>
           ))}

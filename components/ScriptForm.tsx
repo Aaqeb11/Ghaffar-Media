@@ -142,7 +142,7 @@ export const ScriptFrorm = () => {
           <QRCode
             size={256}
             style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-            value="https://drive.google.com/file/d/11owkzA1TjqOYW_VI1HlIGqmwkK_fvLsE/view?usp=drive_link"
+            value="https://drive.google.com/file/d/1aqzRaGrl7ilUG_8Lxr0AyxJOYTra4TNT/view?usp=Shari"
             viewBox={`0 0 256 256`}
           />
         </div>

@@ -30,7 +30,7 @@ const Affiliate = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center gap-[12vh] bg-white text-white">
+    <div className="relative w-full  flex flex-col items-center gap-[12vh] bg-white text-white">
       <div className="flex items-center justify-center gap-2 pt-8 relative z-10">
         {/* Vertical cards for mobile devices */}
         <div className="block lg:hidden w-full px-4">

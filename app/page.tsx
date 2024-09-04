@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import gradient from "../public/gradient.png";
-import video from "../public/video.jpeg";
+// import video from "../public/video.jpeg";
 import { Clients } from "@/data/Clients";
 import dynamic from "next/dynamic";
 import { gsap } from "gsap";
@@ -18,6 +18,8 @@ import Reviews from "@/components/Reviews";
 import AppointmentForm from "@/components/AppointmentForm";
 import Events from "@/components/Events";
 import { Footer } from "@/components/Footer";
+import Affiliate from "@/components/Affiliate";
+import { ScriptFrorm } from "@/components/ScriptForm";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -125,10 +127,47 @@ export default function Home() {
           // markers: true,
         },
       });
+      gsap.from("#affiliate", {
+        yPercent: -100,
+        opacity: 0,
+        duration: 1.3,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: "#affiliate-sec",
+          start: "-230px center",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
+      gsap.from("#affiliate-content", {
+        xPercent: 100,
+        opacity: 0,
+        duration: 1.3,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: "#affiliate-sec",
+          start: "-230px center",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
+      gsap.from("#resources", {
+        yPercent: -100,
+        opacity: 0,
+        duration: 1,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: "#resource-sec",
+          start: "-230px center",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
       gsap.from("#pricing", {
         yPercent: -100,
         opacity: 0,
         duration: 1,
+        delay: 0.6,
         scrollTrigger: {
           trigger: "#pricing-sec",
           start: "-230px center",
@@ -136,6 +175,7 @@ export default function Home() {
           // markers: true,
         },
       });
+
       gsap.from("#form", {
         xPercent: -100,
         opacity: 0,
@@ -182,7 +222,14 @@ export default function Home() {
     },
     { scope: scope }
   );
-
+  const SectionScroll = (targetSectionId: string) => {
+    if (targetSectionId) {
+      const section = document.getElementById(targetSectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <main className="mt-20 " ref={scope} id="#scroll-smoother">
       <section
@@ -212,15 +259,20 @@ export default function Home() {
         <button
           className="border-[1px] border-white shadow-lg shadow-gray-300 px-6 py-4 rounded-xl text-xl  bg-[#D72323] text-white font-bold hover:bg-[white] hover:border-[1px] hover:border-[#D72323] hover:text-black hover:transition hover:duration-500"
           id="button"
+          onClick={() => {
+            SectionScroll("pricing");
+          }}
         >
           Book a call for free
         </button>
-        <Image
-          src={video}
+        <video
+          src="/GhaffarReel.mp4"
           id="video"
-          alt="bg-video"
+          controls
+          autoPlay
+          muted
+          loop
           className="lg:w-[59vw] lg:h-[78vh] rounded-lg"
-          priority
         />
       </section>
       <section
@@ -332,7 +384,48 @@ export default function Home() {
         </div>
         <Reviews />
       </section>
-
+      <section
+        id="affiliate-sec"
+        className="flex flex-col items-center lg:gap-[6vh] gap-[6vh] overflow-hidden scroll-mt-6"
+      >
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="affiliate"
+        >
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            AFFILIATE LINKS
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl  ">
+            Unlock Benefits
+          </h1>
+          <h1 className="text-center text-xl lg:text-3xl  ">
+            Tap a card to explore more details!
+          </h1>
+        </div>
+        <div id="affiliate-content">
+          <Affiliate />
+        </div>
+      </section>
+      <section
+        className="min-h-screen flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
+        id="resource-sec"
+      >
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="resources"
+        >
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            RESOURCES
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl px-1">
+            Get your free course now!
+          </h1>
+          <p className="md:text-lg text-sm text-center px-2">
+            Fill the below form to generate the QR code
+          </p>
+        </div>
+        <ScriptFrorm />
+      </section>
       <section
         className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
         id="pricing-sec"

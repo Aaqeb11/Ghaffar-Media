@@ -418,7 +418,7 @@ export default function Home() {
             RESOURCES
           </p>
           <h1 className="text-center text-3xl lg:text-6xl px-1">
-            Get your free course now!
+            Get your free script now!
           </h1>
           <p className="md:text-lg text-sm text-center px-2">
             Fill the below form to generate the QR code

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import QRCode from "react-qr-code";
 
@@ -9,6 +9,7 @@ type FormFields = {
 };
 
 export const ScriptFrorm = () => {
+  const qrRef = useRef<HTMLDivElement>(null);
   const {
     register,
     handleSubmit,
@@ -23,11 +24,49 @@ export const ScriptFrorm = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const downloadQRCode = () => {
+    const qrCodeSVG = qrRef.current?.querySelector("svg");
+
+    if (qrCodeSVG) {
+      const svgData = new XMLSerializer().serializeToString(qrCodeSVG);
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+
+      const svgSize = qrCodeSVG.getBoundingClientRect();
+      canvas.width = svgSize.width;
+      canvas.height = svgSize.height;
+
+      const img = new Image();
+      const svgBlob = new Blob([svgData], {
+        type: "image/svg+xml;charset=utf-8",
+      });
+      const url = URL.createObjectURL(svgBlob);
+
+      img.onload = () => {
+        ctx?.drawImage(img, 0, 0);
+        URL.revokeObjectURL(url);
+
+        // Convert the canvas to a data URL in JPEG format
+        const jpegDataUrl = canvas.toDataURL("image/jpeg");
+
+        // Create a temporary link element to trigger the download
+        const downloadLink = document.createElement("a");
+        downloadLink.href = jpegDataUrl;
+        downloadLink.download = "qrcode.jpg";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      };
+
+      img.src = url;
+    }
+  };
 
   const onSubmit = (data: FormFields) => {
     try {
       setIsSubmitted(true);
       reset();
+      downloadQRCode();
       console.log("submitted", data);
     } catch (error) {
       console.log("error");
@@ -98,11 +137,12 @@ export const ScriptFrorm = () => {
             maxWidth: 256,
             width: "100%",
           }}
+          ref={qrRef}
         >
           <QRCode
             size={256}
             style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-            value="https://drive.google.com/file/d/11owkzA1TjqOYW_VI1HlIGqmwkK_fvLsE/view?usp=drive_link"
+            value="https://drive.google.com/file/d/1aqzRaGrl7ilUG_8Lxr0AyxJOYTra4TNT/view?usp=Shari"
             viewBox={`0 0 256 256`}
           />
         </div>

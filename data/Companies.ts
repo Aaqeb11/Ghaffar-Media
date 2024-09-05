@@ -42,7 +42,7 @@ export const data = [
         name: "Ellite Summit",
         info: "Delivers robust customer relationship management tools designed to streamline your business and drive growth",
         bgColor:
-          "linear-gradient(to bottom, #ffffff, #f2e4fb, #f3c5eb, #faa3ce, #ff80a3, #ff6f8a, #ff5e6e, #fc5050, #fa4b4b, #f84747, #f64242, #f43d3d",
+          "linear-gradient(to top, #ffffff, #f2e4fb, #f3c5eb, #faa3ce, #ff80a3, #ff6f8a, #ff5e6e, #fc5050, #fa4b4b, #f84747, #f64242, #f43d3d",
       },
     ],
   },
@@ -55,7 +55,7 @@ export const data = [
         name: "Ghaffar Media",
         info: "Top media services and products offered by Ghaffar Media",
         bgColor:
-          "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(218,178,69,1) 100%)",
+          "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(218,178,69,1) 100%)",
       },
     ],
   },
@@ -102,10 +102,10 @@ export const data = [
       {
         id: 1,
         image: EF,
-        name: "Ellite Flipper",
+        name: "Ellite Flippers",
         info: "Hands-on guidance that teaches you real estate wholesaling to close deals.",
         bgColor:
-          "linear-gradient(to bottom, #ffffff, #f4e8fb, #f3cdef, #fab1d7, #ff93b4, #ff809c, #ff6e81, #fd5c63, #fe4e53, #fd3e43, #fc2b31, #f90e1d)",
+          "linear-gradient(to top, #ffffff, #f4e8fb, #f3cdef, #fab1d7, #ff93b4, #ff809c, #ff6e81, #fd5c63, #fe4e53, #fd3e43, #fc2b31, #f90e1d)",
       },
     ],
   },
@@ -130,7 +130,7 @@ export const data = [
         name: "Homerun Equity",
         info: "Real estate industry experts with over 5+ years of experience with the goal of giving highest ROI",
         bgColor:
-          "linear-gradient(to bottom, #ffffff, #ececfb, #d5daf8, #bac9f6, #99baf3, #86b2f1, #6faaf0, #54a2ee, #4d9eee, #479bed, #4097ed, #3993ec)",
+          "linear-gradient(to top, #ffffff, #ececfb, #d5daf8, #bac9f6, #99baf3, #86b2f1, #6faaf0, #54a2ee, #4d9eee, #479bed, #4097ed, #3993ec)",
       },
     ],
   },

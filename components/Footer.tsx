@@ -54,7 +54,7 @@ export const Footer = () => {
               className="md:text-xl text-lg"
             >
               {" "}
-              info@ghaffarenterprises
+              info@ghaffarenterprises.com
             </Link>
             <Link href="tel:+1 (630) 526-4000" className="md:text-xl text-lg">
               {" "}
@@ -65,7 +65,7 @@ export const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2024{" "}
-          <a href="https:///" className="hover:underline">
+          <a href="/" className="hover:underline">
             Ghaffar Enterprises™
           </a>
           . All Rights Reserved.

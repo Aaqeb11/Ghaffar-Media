@@ -9,7 +9,7 @@ export const IntroVideo = () => {
       autoPlay
       muted
       loop
-      className="lg:w-full rounded-lg"
+      className="lg:w-[59vw] lg:h-[78vh] rounded-lg"
     />
   );
 };

@@ -246,7 +246,7 @@ export default function Home() {
               className="text-[#D72323] text-center border-[1px] border-[#D72323] px-5 py-1 rounded-2xl "
               id="limited"
             >
-              LIMITED SPOTS
+              WORK WITH US!
             </p>
             <h1 className="lg:text-9xl text-4xl md:text-7xl font-medium gradient-text text-center">
               Ghaffar Enterprises

@@ -164,7 +164,7 @@ const NavBar = () => {
           </div>
           <div className="p-4">
             <button
-              className="w-full bg-[#D72323] border-[1px] border-black py-3 rounded-xl text-lg font-medium text-white font-bold hover:bg-[#D72323] hover:text-white transition duration-300"
+              className="w-full bg-[#D72323] border-[1px] border-gray-300 py-3 rounded-xl text-lg font-medium text-white font-bold hover:border-[#D72323] hover:bg-white hover:text-[#D72323] transition duration-300"
               onClick={() => {
                 toggleMenu();
                 SectionScroll("pricing");

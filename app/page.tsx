@@ -20,6 +20,7 @@ import Events from "@/components/Events";
 import { Footer } from "@/components/Footer";
 import Affiliate from "@/components/Affiliate";
 import { ScriptFrorm } from "@/components/ScriptForm";
+import { IntroVideo } from "@/components/IntroVideo";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -131,7 +132,7 @@ export default function Home() {
         yPercent: -100,
         opacity: 0,
         duration: 1.3,
-        delay: 0.3,
+        delay: 0.4,
         scrollTrigger: {
           trigger: "#affiliate-sec",
           start: "-230px center",
@@ -143,7 +144,7 @@ export default function Home() {
         xPercent: 100,
         opacity: 0,
         duration: 1.3,
-        delay: 0.6,
+        delay: 0.4,
         scrollTrigger: {
           trigger: "#affiliate-sec",
           start: "-230px center",
@@ -155,7 +156,7 @@ export default function Home() {
         yPercent: -100,
         opacity: 0,
         duration: 1,
-        delay: 0.6,
+        delay: 0.4,
         scrollTrigger: {
           trigger: "#resource-sec",
           start: "-230px center",
@@ -167,7 +168,7 @@ export default function Home() {
         yPercent: -100,
         opacity: 0,
         duration: 1,
-        delay: 0.6,
+        delay: 0.4,
         scrollTrigger: {
           trigger: "#pricing-sec",
           start: "-230px center",
@@ -265,15 +266,7 @@ export default function Home() {
         >
           Book a call for free
         </button>
-        <video
-          src="/GhaffarReel.mp4"
-          id="video"
-          controls
-          autoPlay
-          muted
-          loop
-          className="lg:w-[59vw] lg:h-[78vh] rounded-lg"
-        />
+        <IntroVideo />
       </section>
       <section
         className="flex flex-col items-center  lg:gap-[6vh] gap-[6vh] min-h-screen overflow-hidden"
@@ -385,6 +378,26 @@ export default function Home() {
         <Reviews />
       </section>
       <section
+        className="min-h-screen flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
+        id="resource-sec"
+      >
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="resources"
+        >
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            RESOURCES
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl px-1">
+            Get your free script now!
+          </h1>
+          <p className="md:text-lg text-sm text-center px-2">
+            Fill the below form to generate the QR code
+          </p>
+        </div>
+        <ScriptFrorm />
+      </section>
+      <section
         id="affiliate-sec"
         className="flex flex-col items-center lg:gap-[6vh] gap-[6vh] overflow-hidden scroll-mt-6"
       >
@@ -406,26 +419,7 @@ export default function Home() {
           <Affiliate />
         </div>
       </section>
-      <section
-        className="min-h-screen flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
-        id="resource-sec"
-      >
-        <div
-          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
-          id="resources"
-        >
-          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
-            RESOURCES
-          </p>
-          <h1 className="text-center text-3xl lg:text-6xl px-1">
-            Get your free script now!
-          </h1>
-          <p className="md:text-lg text-sm text-center px-2">
-            Fill the below form to generate the QR code
-          </p>
-        </div>
-        <ScriptFrorm />
-      </section>
+
       <section
         className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
         id="pricing-sec"

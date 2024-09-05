@@ -21,7 +21,7 @@ export const AboutUs = () => {
           </span>{" "}
         </h1>
         <p
-          className="text-lg lg:text-xl lg:pr-14 text-justify  px-2"
+          className="text-lg lg:text-xl lg:pr-14 text-justify text-center  px-2"
           style={{ lineHeight: "1.85" }}
         >
           As an accomplished entrepreneur with extensive experience in

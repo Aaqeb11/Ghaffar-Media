@@ -18,13 +18,15 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
-    url: "https://your-domain.com",
+    url: "https://ghaffar-media.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.34900809.png&w=1920&q=75",
   },
   twitter: {
     card: "summary_large_image",
     title: "Aura - Nurture Naturally",
     description: "Discover natural products for your well-being.",
-    images: ["https://your-domain.com/path-to-your-logo-image.jpg"],
+    images: [
+      "https://ghaffar-media.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.34900809.png&w=1920&q=75",
+    ],
   },
 };
 

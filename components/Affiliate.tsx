@@ -51,7 +51,7 @@ const Affiliate = () => {
               style={{ backgroundImage: data.backgroundImage }}
             >
               <h2 className="text-black text-2xl  mb-4">{data.title}</h2>
-              <p className="text-black text-lg">{data.description}</p>
+              <p className="text-black text-lg italic">{data.description}</p>
             </a>
           ))}
         </div>
@@ -67,7 +67,7 @@ const Affiliate = () => {
               style={{ backgroundImage: slide.backgroundImage }}
             >
               <h2 className="text-3xl mb-2">{slide.title}</h2>
-              <p className="text-center mx-4">{slide.description}</p>
+              <p className="text-center mx-4 italic">{slide.description}</p>
             </a>
           ))}
         </div>

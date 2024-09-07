@@ -35,32 +35,35 @@ export const Companies: React.FC = () => {
       if (containerRef.current) {
         const domains = containerRef.current.querySelectorAll(".domain-group");
 
-        domains.forEach((domain, domainIndex) => {
-          const cards = domain.querySelectorAll(".company-card");
+        // domains.forEach((domain, domainIndex) => {
+        //   const cards = domain.querySelectorAll(".company-card");
 
-          cards.forEach((card, cardIndex) => {
-            const isEven = (domainIndex + cardIndex) % 2 === 0;
+        domains.forEach((domain, index) => {
+          const isEven = index % 2 === 0;
 
-            gsap.from(card, {
-              xPercent: isEven ? -50 : 50,
-              opacity: 0,
-              duration: 0.8,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 20%",
-                toggleActions: "play none none reverse",
-              },
-            });
+          gsap.from(domain, {
+            xPercent: isEven ? -50 : 50,
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: domain,
+              start: "top 80%",
+              end: "bottom 20%",
+              toggleActions: "play none none reverse",
+            },
           });
         });
+        // });
       }
     },
     { scope: containerRef }
   );
 
   return (
-    <div className="flex flex-col gap-4 overflow-x-hidden " ref={containerRef}>
+    <div
+      className="flex flex-col gap-4 overflow-x-hidden w-full"
+      ref={containerRef}
+    >
       {data.map((domain: DomainGroup, index: number) => (
         <div
           key={domain.domain}
@@ -69,7 +72,7 @@ export const Companies: React.FC = () => {
           <h1 className="text-3xl font-bold mb-4">{domain.domain}:</h1>
           <div className="flex lg:flex-row flex-col justify-center gap-4 w-full px-5 items-center">
             {domain.companies.map((company: Company) => (
-              <div className="w-full sm:w-[70%] company-card" key={company.id}>
+              <div className="md:w-[70%]  company-card" key={company.id}>
                 <Card
                   className={`flex flex-col items-center text-center overflow-hidden h-full shadow-2xl transition-transform duration-300 hover:scale-105`}
                   style={{ background: company.bgColor }}
@@ -91,7 +94,7 @@ export const Companies: React.FC = () => {
                       <CardTitle className="text-xl font-bold">
                         {company.name}
                       </CardTitle>
-                      <CardDescription className="text-sm flex-grow text-black">
+                      <CardDescription className="text-sm flex-grow text-black italic">
                         {company.info}
                       </CardDescription>
                     </div>

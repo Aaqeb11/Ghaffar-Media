@@ -238,7 +238,7 @@ export default function Home() {
         id="home"
       >
         <div
-          className="flex flex-col items-center  lg:mt-[50px] mt-[30px]"
+          className="flex flex-col items-center  lg:mt-[50px] mt-[30px] gap-4"
           id="intro"
         >
           <div className="flex flex-col items-center gap-6 md:gap-12">
@@ -252,9 +252,8 @@ export default function Home() {
               Ghaffar Enterprises
             </h1>
           </div>
-          <p className="text-[21px] lg:w-[45vw] w-[85vw] lg:text-2xl text-center leading-8 ">
-            We help enterpreneurs produce top-tier social media content taking
-            their brand and business to the next level.
+          <p className="text-[21px] lg:w-[45vw] w-[85vw] lg:text-3xl text-center leading-8 italic font-medium">
+            Where Your Vision Meets Our Expertise
           </p>
         </div>
         <button
@@ -329,15 +328,15 @@ export default function Home() {
             industries come together to share knowledge, forge connections, and
             explore new opportunities.{" "}
             <span className="hidden md:flex md:pt-4">
-              Hosted by our visionary leader, these events serve as a platform
-              for promoting the innovative solutions we offer across our diverse
-              range of companies, including lead generation, real estate
-              wholesaling, marketing, coaching, and more. We invite you to
-              browse through the moments captured at our events, where you’ll
-              see our team and clients engaging in meaningful conversations,
-              brainstorming the next big idea, and laying the groundwork for
-              future collaborations. Join us at our next event and become a part
-              of this thriving network.
+              Hosted by our Visionary founder, these events focus on empowering
+              individuals to start or build their own business, while showcasing
+              the innovative solutions we offer across a diverse range of
+              industries, including lead generation, real estate wholesaling,
+              marketing, coaching, and more. We invite you to browse through the
+              moments captured at our events, where like-minded individuals
+              engage in insightful discussions, spark new ideas, and lay the
+              foundation for future collaborations. Join us at our next event
+              and become part of this growing, dynamic community.
             </span>
           </p>
           <Events />
@@ -378,7 +377,7 @@ export default function Home() {
         <Reviews />
       </section>
       <section
-        className="min-h-screen flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
+        className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
         id="resource-sec"
       >
         <div
@@ -432,11 +431,11 @@ export default function Home() {
             PRICING
           </p>
           <h1 className="text-center text-3xl lg:text-6xl px-1">
-            Ready to invest in your online presence?
+            Ready to Grow Your Business Empire?
           </h1>
           <p className="md:text-lg text-sm text-center px-2">
-            Chat with our social media experts on how you can grow with Ghaffar
-            media
+            Connect with our experts and explore how our diverse services can
+            drive your success!
           </p>
         </div>
         <div id="form">

@@ -72,7 +72,7 @@ export const Companies: React.FC = () => {
           <h1 className="text-3xl font-bold mb-4">{domain.domain}:</h1>
           <div className="flex lg:flex-row flex-col justify-center gap-4 w-full px-5 items-center">
             {domain.companies.map((company: Company) => (
-              <div className="md:w-[70%]  company-card" key={company.id}>
+              <div className="md:w-[70%] w-full  company-card" key={company.id}>
                 <Card
                   className={`flex flex-col items-center text-center overflow-hidden h-full shadow-2xl transition-transform duration-300 hover:scale-105`}
                   style={{ background: company.bgColor }}

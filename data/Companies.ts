@@ -20,7 +20,7 @@ export const data = [
     ],
   },
   {
-    domain: "CRM",
+    domain: "Link & Lead",
     companies: [
       {
         id: 1,

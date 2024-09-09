@@ -1,8 +1,18 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useState, useEffect, useRef } from "react";
+import "react-multi-carousel/lib/styles.css";
+import { reviews } from "../data/Reviews";
 import { useInView } from "react-intersection-observer";
-import { useRef } from "react";
+interface VideoData {
+  video: string; // Assuming the video property is a string URL
+  // Add other properties if needed
+}
 
-export const IntroVideo = () => {
+interface VideoItemsProps {
+  video: VideoData;
+  isActive: boolean;
+}
+export const VideoItems: React.FC<VideoItemsProps> = ({ video, isActive }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -19,6 +29,8 @@ export const IntroVideo = () => {
         videoElement.pause();
       }
     }
+
+    // Cleanup function
     return () => {
       if (videoElement) {
         videoElement.pause();
@@ -26,16 +38,14 @@ export const IntroVideo = () => {
     };
   }, [inView]);
   return (
-    <div ref={ref} className="">
+    <div ref={ref} className=" flex justify-center items-center">
       <video
         ref={videoRef}
-        className="lg:w-[59vw] lg:h-[78vh] rounded-lg"
-        id="video"
-        loop
-        muted
+        className="md:h-[75vh] h-[57vh] rounded-xl "
         controls
+        loop
       >
-        <source src="/GhaffarReel.mp4" type="video/mp4" />
+        <source src={video.video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

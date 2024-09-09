@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { reviews } from "../data/Reviews"; // Assume we have this import
-
+import { reviews } from "../data/Reviews";
+import { useInView } from "react-intersection-observer";
+import { VideoItems } from "./VideoItems";
 export default function VideoCarousel() {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -25,26 +27,19 @@ export default function VideoCarousel() {
   return (
     <Carousel
       responsive={responsive}
-      // autoPlay={true}
       infinite={true}
-      autoPlaySpeed={4000}
-      // removeArrowOnDeviceType={["tablet", "mobile"]}
       pauseOnHover
+      afterChange={(previousSlide, { currentSlide }) => {
+        setActiveIndex(currentSlide);
+      }}
       className="w-full h-full"
     >
       {reviews.map((video, index) => (
-        <div key={index} className=" flex justify-center items-center">
-          <video
-            className="md:h-[75vh] h-[57vh] rounded-xl "
-            controls
-            autoPlay
-            muted
-            loop
-          >
-            <source src={video.video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <VideoItems
+          key={index}
+          video={video}
+          isActive={index === activeIndex}
+        />
       ))}
     </Carousel>
   );

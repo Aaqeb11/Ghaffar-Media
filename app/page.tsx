@@ -132,7 +132,7 @@ export default function Home() {
         yPercent: -100,
         opacity: 0,
         duration: 1.3,
-        delay: 0.4,
+        delay: 0.3,
         scrollTrigger: {
           trigger: "#affiliate-sec",
           start: "-230px center",
@@ -144,7 +144,7 @@ export default function Home() {
         xPercent: 100,
         opacity: 0,
         duration: 1.3,
-        delay: 0.4,
+        delay: 0.3,
         scrollTrigger: {
           trigger: "#affiliate-sec",
           start: "-230px center",
@@ -156,7 +156,7 @@ export default function Home() {
         yPercent: -100,
         opacity: 0,
         duration: 1,
-        delay: 0.4,
+        delay: 0.3,
         scrollTrigger: {
           trigger: "#resource-sec",
           start: "-230px center",
@@ -168,7 +168,7 @@ export default function Home() {
         yPercent: -100,
         opacity: 0,
         duration: 1,
-        delay: 0.4,
+        delay: 0.3,
         scrollTrigger: {
           trigger: "#pricing-sec",
           start: "-230px center",
@@ -181,7 +181,7 @@ export default function Home() {
         xPercent: -100,
         opacity: 0,
         duration: 1.3,
-        delay: 0.4,
+        delay: 0.3,
         scrollTrigger: {
           trigger: "#pricing-sec",
           start: "-230px center",
@@ -246,7 +246,7 @@ export default function Home() {
               className="text-[#D72323] text-center border-[1px] border-[#D72323] px-5 py-1 rounded-2xl "
               id="limited"
             >
-              WORK WITH US!
+              GET TO KNOW MORE ABOUT ME!
             </p>
             <h1 className="lg:text-9xl text-4xl md:text-7xl font-medium gradient-text text-center">
               Ghaffar Enterprises

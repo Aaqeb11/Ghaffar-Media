@@ -44,6 +44,8 @@ export const VideoItems: React.FC<VideoItemsProps> = ({ video, isActive }) => {
         className="md:h-[75vh] h-[57vh] rounded-xl "
         controls
         loop
+        playsInline
+        muted
       >
         <source src={video.video} type="video/mp4" />
         Your browser does not support the video tag.

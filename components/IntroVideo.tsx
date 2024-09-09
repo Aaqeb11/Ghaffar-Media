@@ -32,6 +32,8 @@ export const IntroVideo = () => {
         className="lg:w-[59vw] lg:h-[70vh] rounded-lg"
         id="video"
         loop
+        playsInline
+        muted
         controls
       >
         <source src="/GhaffarReel.mp4" type="video/mp4" />

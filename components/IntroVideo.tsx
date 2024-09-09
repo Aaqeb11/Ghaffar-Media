@@ -26,13 +26,12 @@ export const IntroVideo = () => {
     };
   }, [inView]);
   return (
-    <div ref={ref} className="">
+    <div ref={ref} className="w-full flex items-center justify-center">
       <video
         ref={videoRef}
-        className="lg:w-[59vw] lg:h-[78vh] rounded-lg"
+        className="lg:w-[59vw] lg:h-[70vh] rounded-lg"
         id="video"
         loop
-        muted
         controls
       >
         <source src="/GhaffarReel.mp4" type="video/mp4" />

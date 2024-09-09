@@ -38,7 +38,7 @@ export const VideoItems: React.FC<VideoItemsProps> = ({ video, isActive }) => {
     };
   }, [inView]);
   return (
-    <div ref={ref} className=" flex justify-center items-center">
+    <div ref={ref} className="flex justify-center items-center">
       <video
         ref={videoRef}
         className="md:h-[75vh] h-[57vh] rounded-xl "

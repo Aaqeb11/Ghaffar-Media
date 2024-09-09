@@ -109,7 +109,7 @@ export const data = [
     ],
   },
   {
-    domain: "EJ",
+    domain: "Joint Venture With Us",
     companies: [
       {
         id: 1,

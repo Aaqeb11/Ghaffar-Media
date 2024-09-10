@@ -21,15 +21,14 @@ export const AboutUs = () => {
           </span>{" "}
         </h1>
         <p
-          className="text-lg lg:text-xl lg:pr-14 text-justify text-center  px-2"
+          className="text-lg lg:text-xl lg:pr-14 text-justify text-center  px-2 "
           style={{ lineHeight: "1.85" }}
         >
-          As an accomplished entrepreneur with extensive experience in
-          Leadership and Business Development, I have successfully led projects
-          that generated over $20 million in revenue for my organization. My
-          current focus, along with my team, is on exploring new markets,
-          identifying potential expansion opportunities, and implementing
-          strategies to grow our customer base.{" "}
+          As an accomplished entrepreneur with experience in Leadership and
+          Business Development, I have led projects generating over $20 million
+          in revenue. Currently, my focus, along with my team, is on exploring
+          new markets, identifying expansion opportunities, and implementing
+          strategies to grow and retain our customer base.
           <span className="hidden lg:flex lg:pt-4">
             My career has been deeply rooted in the service industry, giving me
             a unique understanding of the diverse needs of individuals. This

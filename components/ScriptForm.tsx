@@ -44,21 +44,24 @@ export const ScriptForm = () => {
     <div className="flex flex-col w-full items-center gap-14">
       {/* Card Structure */}
       <div
-        className="shadow-lg rounded-xl p-8 w-[90%] max-w-lg flex flex-col items-center"
+        className="shadow-2xl border-[1px] rounded-xl p-8 w-[90%] max-w-lg flex flex-col items-center"
         style={{
-          background: "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,48,48,1) 100%)",
+          background:
+            "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,48,48,1) 100%)",
         }}
       >
         {/* Card Content */}
-        <h2 className="text-2xl font-bold mb-4 text-white">Get Your Free Access</h2>
-        <p className="text-white mb-6 text-center">
+        <h2 className="text-2xl font-bold mb-4 text-black">
+          Get Your Free Access
+        </h2>
+        <p className="text-white mb-6 text-center text-gray-700">
           Enter your details and get instant access!
         </p>
 
         {/* Button to trigger the modal */}
         <button
           onClick={() => setShowModal(true)}
-          className="bg-white text-[#D72323] p-2 rounded-xl w-full font-semibold"
+          className="text-white bg-[#D72323] p-2 rounded-xl w-full font-semibold"
         >
           Open Form
         </button>
@@ -136,4 +139,3 @@ export const ScriptForm = () => {
     </div>
   );
 };
-

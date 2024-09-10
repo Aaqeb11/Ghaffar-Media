@@ -21,7 +21,7 @@ export const AboutUs = () => {
           </span>{" "}
         </h1>
         <p
-          className="text-lg lg:text-xl lg:pr-14 text-justify text-center  px-2 "
+          className="text-lg lg:text-xl lg:pr-14 text-justify text-center  px-2 tracking-tight"
           style={{ lineHeight: "1.85" }}
         >
           As an accomplished entrepreneur with expertise in leadership and
@@ -30,7 +30,7 @@ export const AboutUs = () => {
           team and I are focused on exploring new markets, uncovering new growth
           opportunities, and driving strategies to grow and retain our customer
           base.
-          <span className="hidden lg:flex lg:pt-4">
+          <span className="hidden lg:flex lg:pt-4 tracking-tight">
             My career has been deeply rooted in the service industry, giving me
             a unique understanding of the diverse needs of individuals. This
             experience enables me to connect with people effectively and deliver

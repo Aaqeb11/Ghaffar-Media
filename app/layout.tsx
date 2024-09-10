@@ -3,30 +3,31 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ghaffar-media-aaqeb11s-projects.vercel.app"),
   title: "Ghaffar Enterprises",
   description:
-    "Aura - Nurture Naturally. Discover natural products for your well-being.",
+    "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar, encompassing a diverse portfolio of companies focused on innovation, integrity, and impact. Our companies span lead generation, real estate, media, coaching, and more, all working together to empower businesses and individuals to achieve growth and success. At Ghaffar Enterprises, we are committed to delivering exceptional value and building a brighter future.",
   openGraph: {
-    title: "Aura - Nurture Naturally",
-    description: "Discover natural products for your well-being.",
+    title: "Ghaffar Enterprises",
+    description:
+      "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar, encompassing a diverse portfolio of companies focused on innovation, integrity, and impact. Our companies span lead generation, real estate, media, coaching, and more, all working together to empower businesses and individuals to achieve growth and success. At Ghaffar Enterprises, we are committed to delivering exceptional value and building a brighter future.",
     images: [
       {
-        url: "",
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Aura Logo",
+        alt: "Ghaffar Enterprises",
       },
     ],
     type: "website",
-    url: "https://ghaffar-media.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.34900809.png&w=1920&q=75",
+    url: "/logo.png",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aura - Nurture Naturally",
-    description: "Discover natural products for your well-being.",
-    images: [
-      "https://ghaffar-media.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.34900809.png&w=1920&q=75",
-    ],
+    title: "Ghaffar Enterprises",
+    description:
+      "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar, encompassing a diverse portfolio of companies focused on innovation, integrity, and impact. Our companies span lead generation, real estate, media, coaching, and more, all working together to empower businesses and individuals to achieve growth and success. At Ghaffar Enterprises, we are committed to delivering exceptional value and building a brighter future.",
+    images: ["/logo.png"],
   },
 };
 
@@ -43,4 +44,7 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+{
+  /* <meta property="og:image" content="Link preview image URL"></meta> */
 }

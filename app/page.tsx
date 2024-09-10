@@ -17,6 +17,7 @@ import { Collaborations } from "@/components/Collaborations";
 import Reviews from "@/components/Reviews";
 import AppointmentForm from "@/components/AppointmentForm";
 import Events from "@/components/Events";
+import CalendlyEmbed from "@/components/Calendly";
 import { Footer } from "@/components/Footer";
 import Affiliate from "@/components/Affiliate";
 import { ScriptFrorm } from "@/components/ScriptForm";
@@ -440,6 +441,26 @@ export default function Home() {
         </div>
         <div id="form">
           <AppointmentForm />
+        </div>
+      </section>
+      <section
+        className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
+        id="calendar-sec"
+      >
+        <div
+          className="flex flex-col items-center gap-4 justify-center lg:justify-start pt-[5vh]"
+          id="calendar"
+        >
+          <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
+            Book A Meeting
+          </p>
+          <h1 className="text-center text-3xl lg:text-6xl px-4">
+            Book A Call With Us To Know More! 
+          </h1>
+
+        </div>
+        <div id="calendar">
+          <CalendlyEmbed />
         </div>
       </section>
       <Footer />

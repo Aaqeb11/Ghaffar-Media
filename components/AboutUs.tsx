@@ -26,10 +26,10 @@ export const AboutUs = () => {
         >
           As an accomplished entrepreneur with expertise in leadership and
           business development, I have played a key role in effectively overseen
-          projects that generated over $20 million in revenue. At present, my
-          team and I are dedicated to exploring new markets, uncovering new
-          growth opportunities, and driving strategies to grow and retain our
-          customer base.
+          projects that generated over $20 million in revenue. At this
+          particular stage, my proficient team is dedicated to exploring new
+          markets, uncovering new growth opportunities, and driving strategies
+          to grow and retain our customer base.
           <span className="hidden lg:flex lg:pt-4 tracking-tight">
             My career has been deeply rooted in the service industry, giving me
             a unique understanding of the diverse needs of individuals. This

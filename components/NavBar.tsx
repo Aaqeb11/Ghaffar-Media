@@ -148,13 +148,13 @@ const NavBar = () => {
             {items.map((item, index) => (
               <div className="relative" key={index}>
                 <div
-                  className="bg-[#D72323] absolute top-0 left-0 w-full h-full z-10 rounded-lg"
+                  className="bg-[#D72323] absolute top-0 left-0 w-full h-full z-10 rounded-xl"
                   ref={(el) => {
                     menuItemsRef.current[index] = el;
                   }}
                 ></div>
                 <button
-                  className="text-left border-black text-xl text-black border-[1px] px-4 rounded-lg shadow-lg py-1 font-bold bg-white w-full"
+                  className="text-left border-gray-400 text-xl text-black border-[1px] px-4 rounded-xl shadow-lg py-1 font-bold bg-white w-full"
                   onClick={() => toggleMenu(item.id.toLowerCase())}
                 >
                   {item.item}

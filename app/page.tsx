@@ -457,9 +457,8 @@ export default function Home() {
             Book A Meeting
           </p>
           <h1 className="text-center text-3xl lg:text-6xl px-4">
-            Book A Call With Us To Know More! 
+            Book A Call With Us To Know More!
           </h1>
-
         </div>
         <div id="calendar">
           <CalendlyEmbed />

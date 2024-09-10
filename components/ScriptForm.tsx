@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import QRCode from "react-qr-code";
+import emailjs from "emailjs-com";
+import "dotenv/config";
 
 type FormFields = {
   name: string;
@@ -9,6 +10,9 @@ type FormFields = {
 };
 
 export const ScriptForm = () => {
+  const template = process.env.NEXT_PUBLIC_TEMPLATE_SCRIPT;
+  const service = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const key = process.env.NEXT_PUBLIC_USER_ID;
   const qrRef = useRef<HTMLDivElement>(null);
   const {
     register,
@@ -27,17 +31,21 @@ export const ScriptForm = () => {
   const [showModal, setShowModal] = useState(false); // State for modal visibility
 
   const onSubmit = (data: FormFields) => {
-    try {
-      setIsSubmitted(true);
-      reset();
-      console.log("submitted", data);
-      window.open(
-        "https://drive.google.com/file/d/1aqzRaGrl7ilUG_8Lxr0AyxJOYTra4TNT/view?usp=Shari",
-        "_blank"
-      );
-    } catch (error) {
-      console.log("error");
-    }
+    emailjs
+      .send(service!, template!, data, key)
+      .then((response) => {
+        setIsSubmitted(true);
+        setShowModal(false);
+        reset();
+        console.log("submitted", data);
+        window.open(
+          "https://drive.google.com/file/d/1aqzRaGrl7ilUG_8Lxr0AyxJOYTra4TNT/view?usp=Shari",
+          "_blank"
+        );
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+      });
   };
 
   return (

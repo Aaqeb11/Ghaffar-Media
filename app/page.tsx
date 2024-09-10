@@ -446,7 +446,7 @@ export default function Home() {
         </div>
       </section>
       <section
-        className=" flex flex-col lg:gap-[6vh] gap-[6vh]  min-h-screen"
+        className=" flex flex-col lg:gap-[6vh] gap-[6vh]  overflow-hidden"
         id="calendar-sec"
       >
         <div

@@ -2,9 +2,9 @@ import { InlineWidget } from "react-calendly";
 
 const CalendlyEmbed = () => {
   return (
-    <div className=" ">
+    <div className="">
       <InlineWidget
-        styles={{ height: "100vh" }}
+        styles={{ height: "126vh" }}
         url="https://calendly.com/ihustle/10min"
       />
     </div>

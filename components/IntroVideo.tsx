@@ -29,7 +29,7 @@ export const IntroVideo = () => {
     <div ref={ref} className="w-full flex items-center justify-center">
       <video
         ref={videoRef}
-        className="lg:w-[59vw] lg:h-[70vh] rounded-lg"
+        className="lg:w-auto lg:h-[70vh] rounded-lg"
         id="video"
         loop
         playsInline

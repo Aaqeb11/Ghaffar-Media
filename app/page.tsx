@@ -20,7 +20,7 @@ import Events from "@/components/Events";
 import CalendlyEmbed from "@/components/Calendly";
 import { Footer } from "@/components/Footer";
 import Affiliate from "@/components/Affiliate";
-import { ScriptFrorm } from "@/components/ScriptForm";
+import { ScriptForm } from "@/components/ScriptForm";
 import { IntroVideo } from "@/components/IntroVideo";
 
 gsap.registerPlugin(useGSAP);
@@ -395,7 +395,7 @@ export default function Home() {
             Fill the below form to generate the QR code
           </p>
         </div>
-        <ScriptFrorm />
+        <ScriptForm />
       </section>
       <section
         id="affiliate-sec"

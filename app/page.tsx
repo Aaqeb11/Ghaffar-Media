@@ -22,6 +22,8 @@ import { Footer } from "@/components/Footer";
 import Affiliate from "@/components/Affiliate";
 import { ScriptForm } from "@/components/ScriptForm";
 import { IntroVideo } from "@/components/IntroVideo";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -464,6 +466,12 @@ export default function Home() {
         </div>
       </section>
       <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        limit={1}
+        closeButton={false}
+      />
     </main>
   );
 }

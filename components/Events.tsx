@@ -29,7 +29,8 @@ export default function Brands() {
                 src={data.image}
                 alt={`Brand ${(index % events.length) + 1}`}
                 fill
-                className="object-contain rounded-custom"
+                className="object-contain rounded-custom "
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 priority
               />
             </div>

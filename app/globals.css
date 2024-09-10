@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -57,7 +57,7 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
+} */
 .gradient-text {
   background-image: url("../public/gradient.png");
   background-clip: text;
@@ -108,29 +108,28 @@
   transform: scale(1);
 }
 
-
 /* Optional: Adjust the dots for better visibility */
 .react-multi-carousel-dot-list {
-bottom: -30px;
+  bottom: -30px;
 }
 .custom-bg-white {
-background-color: #ffffff !important;
+  background-color: #ffffff !important;
 }
 .custom-arrow {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-z-index: 1000;
-background: none;
-border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background: none;
+  border: none;
 }
 
 .left-arrow {
-left: 1px;
+  left: 1px;
 }
 
 .right-arrow {
-right: 1px;
+  right: 1px;
 }
 
 /* Optional: Adjust the dots for better visibility */
@@ -154,11 +153,11 @@ right: 1px;
   }
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */

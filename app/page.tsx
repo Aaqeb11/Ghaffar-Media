@@ -391,10 +391,10 @@ export default function Home() {
             RESOURCES
           </p>
           <h1 className="text-center text-3xl lg:text-6xl px-1">
-            Get your free script now!
+            Close More Deals Using My Script!
           </h1>
           <p className="md:text-lg text-sm text-center px-2">
-            Fill the below form to generate the QR code
+            Refined with 7 years of experience
           </p>
         </div>
         <ScriptForm />
@@ -446,7 +446,7 @@ export default function Home() {
         </div>
       </section>
       <section
-        className=" flex flex-col lg:gap-[6vh] gap-[6vh] overflow-hidden"
+        className=" flex flex-col lg:gap-[6vh] gap-[6vh]  min-h-screen"
         id="calendar-sec"
       >
         <div

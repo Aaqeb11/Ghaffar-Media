@@ -14,7 +14,7 @@ const NavBar = () => {
   const items = [
     { item: "Home", id: "home" },
     { item: "Companies", id: "companies" },
-    { item: "Pricing", id: "pricing" },
+    { item: "Contact", id: "pricing" },
   ];
   const menuItemsRef = useRef<(HTMLParagraphElement | null)[]>([]);
   const size = useWindowSize();

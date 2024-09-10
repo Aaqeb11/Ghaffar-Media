@@ -51,10 +51,10 @@ export const ScriptForm = () => {
         }}
       >
         {/* Card Content */}
-        <h2 className="text-2xl font-bold mb-4 text-black">
-          Get Your Free Access
+        <h2 className="md:text-2xl text-xl  font-bold mb-4 text-black">
+          GET YOUR FREE SCRIPT!
         </h2>
-        <p className="text-white mb-6 text-center text-gray-700">
+        <p className="text-white mb-6 text-center text-gray-700 ">
           Enter your details and get instant access!
         </p>
 

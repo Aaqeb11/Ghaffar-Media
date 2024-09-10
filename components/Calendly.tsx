@@ -1,9 +1,12 @@
-import { InlineWidget } from 'react-calendly';
+import { InlineWidget } from "react-calendly";
 
 const CalendlyEmbed = () => {
   return (
-    <div style={{ height: '600px' }}>
-      <InlineWidget url="https://calendly.com/ihustle/10min" />
+    <div className=" ">
+      <InlineWidget
+        styles={{ height: "100vh" }}
+        url="https://calendly.com/ihustle/10min"
+      />
     </div>
   );
 };

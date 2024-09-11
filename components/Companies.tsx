@@ -20,6 +20,7 @@ interface Company {
   name: string;
   info: string;
   bgColor: string;
+  link?: string; 
 }
 
 interface DomainGroup {
@@ -34,9 +35,6 @@ export const Companies: React.FC = () => {
     () => {
       if (containerRef.current) {
         const domains = containerRef.current.querySelectorAll(".domain-group");
-
-        // domains.forEach((domain, domainIndex) => {
-        //   const cards = domain.querySelectorAll(".company-card");
 
         domains.forEach((domain, index) => {
           const isEven = index % 2 === 0;
@@ -53,7 +51,6 @@ export const Companies: React.FC = () => {
             },
           });
         });
-        // });
       }
     },
     { scope: containerRef }
@@ -76,6 +73,7 @@ export const Companies: React.FC = () => {
                 <Card
                   className={`flex flex-col items-center text-center overflow-hidden h-full shadow-2xl transition-transform duration-300 hover:scale-105`}
                   style={{ background: company.bgColor }}
+                  onClick={() => company.link && window.open(company.link, "_blank")} // Open link if it exists
                 >
                   <CardHeader className="flex flex-col items-center h-full justify-between">
                     {company.image ? (

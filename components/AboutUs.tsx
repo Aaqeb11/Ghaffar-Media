@@ -11,11 +11,11 @@ export const AboutUs = () => {
         <h1 className="flex gap-2 text-3xl lg:text-4xl">
           Meet{" "}
           <span className="flex flex-col items-center">
-            <p>Abdullah</p>
+            <p>Abdullah Ghaffar</p>
             <Image
               src={underline}
               alt="underline"
-              className="lg:w-full w-[90px]"
+              className="lg:w-[150px] w-[90px]"
               priority
             />
           </span>{" "}

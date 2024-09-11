@@ -7,7 +7,7 @@ const Affiliate = () => {
       title: "Kind Skiptracing",
       description:
         "Earn passive income from Kind products by using our referral code to avail benefits: ReferralCode=ihustlebro",
-      link: "http://kindskiptracing.com/affiliate-program",
+      link: "https://kindskiptracing.com/affiliate-program",
       backgroundImage:
         "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(247,103,7,1) 100%)",
     },

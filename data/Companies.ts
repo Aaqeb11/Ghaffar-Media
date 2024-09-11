@@ -12,10 +12,11 @@ export const data = [
       {
         id: 1,
         image: AK,
-        name: "Akcallers",
+        name: "AK Callers",
         info: "Professional and experienced cold callers trained on industry specific sales",
         bgColor:
           "linear-gradient(to top, #f1f9f1, #e8f6e8, #e0f2e0, #d7efd7, #cfebcf, #bee3bd, #addaac, #9cd29a, #7ec27a, #60b259, #3ea236, #009200)",
+        link: "https://www.akcallers.com/", // Add link here
       },
     ],
   },
@@ -29,7 +30,7 @@ export const data = [
         info: "Empowering Entrepreneurs, Sparking Innovation, Building Success",
         bgColor:
           "linear-gradient(to top, #ffffff, #f2e4fb, #f3c5eb, #faa3ce, #ff80a3, #ff6f8a, #ff5e6e, #fc5050, #fa4b4b, #f84747, #f64242, #f43d3d",
-      },
+       },
     ],
   },
   {
@@ -42,7 +43,8 @@ export const data = [
         info: "We help Entrepreneurs build and Monetize their Personal Brand",
         bgColor:
           "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(218,178,69,1) 100%)",
-      },
+          link: "https://ghaffarmedia.com/",
+        },
     ],
   },
   {
@@ -54,6 +56,7 @@ export const data = [
         name: "Ghaffar Management",
         info: "Experience the Ghaffar Advantage with expert property management",
         bgColor: "",
+        link: "https://www.ghaffarmgmt.com/",
       },
     ],
   },
@@ -67,7 +70,9 @@ export const data = [
         info: "Get an offer for your house today",
         bgColor:
           "linear-gradient(to top, #ffffff, #eeeff9, #d9e0f3, #c0d2ee, #a3c5e7, #8ebae1, #77afdb, #5ca5d5, #4a99d0, #388eca, #2382c5, #0076bf)",
-      },
+          link: "https://www.nationalfastoffer.com/",
+       
+        },
     ],
   },
   {
@@ -79,7 +84,7 @@ export const data = [
         name: "Ghaffar Studio",
         info: "Professional studio services, delivering high-quality production and creative solutions for your projects",
         bgColor: "",
-      },
+        },
     ],
   },
   {
@@ -92,7 +97,8 @@ export const data = [
         info: "Hands-on guidance that teaches you real estate wholesaling to close more deals",
         bgColor:
           "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,48,48,1) 100%)",
-      },
+          link: "https://eliteflippers.com/",
+        },
     ],
   },
   {
@@ -105,7 +111,7 @@ export const data = [
         info: "Insights from Entrepreneurs to be financially free",
         bgColor:
           "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(137,49,158,1) 100%)",
-      },
+          },
     ],
   },
   {
@@ -118,7 +124,8 @@ export const data = [
         info: "Sell Your Deal Fast! Partner with Nationwide Property Liquidators!",
         bgColor:
           "linear-gradient(to top, #ffffff, #ececfb, #d5daf8, #bac9f6, #99baf3, #86b2f1, #6faaf0, #54a2ee, #4d9eee, #479bed, #4097ed, #3993ec)",
-      },
+          link: "https://homerunequity.com/",
+        },
     ],
   },
 ];

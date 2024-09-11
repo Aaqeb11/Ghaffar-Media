@@ -299,7 +299,7 @@ export default function Home() {
             COMPANIES
           </p>
           <h1 className="text-center text-3xl lg:text-6xl  ">
-            Companies and Clientele
+            My Companies 
           </h1>
         </div>
         <Companies />

@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import underline from "../public/underline.png";
-import abdullah from "../public/abdullah.png";
 import abdullah2 from "../public/abdullah2.png";
 import { ProfilePhoto } from "./ProfilePhoto";
 export const AboutUs = () => {
@@ -15,7 +14,7 @@ export const AboutUs = () => {
             <Image
               src={underline}
               alt="underline"
-              className="lg:w-[150px] w-[90px]"
+              className="lg:w-[200px] w-[180px]"
               priority
             />
           </span>{" "}

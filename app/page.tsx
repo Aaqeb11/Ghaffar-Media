@@ -298,9 +298,7 @@ export default function Home() {
           <p className="text-[#D72323] text-center border-[1px] border-[#D72323] px-8 py-1 rounded-2xl text-sm tracking-wider">
             COMPANIES
           </p>
-          <h1 className="text-center text-3xl lg:text-6xl  ">
-            My Companies 
-          </h1>
+          <h1 className="text-center text-3xl lg:text-6xl  ">My Companies</h1>
         </div>
         <Companies />
       </section>
@@ -474,3 +472,4 @@ export default function Home() {
     </main>
   );
 }
+//Example

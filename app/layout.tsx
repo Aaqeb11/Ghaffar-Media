@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       {
         url: "/logo.png",
         width: 1500,
-        height: 630,
+        height: 830,
         alt: "Ghaffar Enterprises",
       },
     ],
@@ -27,7 +27,14 @@ export const metadata: Metadata = {
     title: "Ghaffar Enterprises",
     description:
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar, encompassing a diverse portfolio of companies focused on innovation, integrity, and impact. Our companies span lead generation, real estate, media, coaching, and more, all working together to empower businesses and individuals to achieve growth and success. At Ghaffar Enterprises, we are committed to delivering exceptional value and building a brighter future.",
-    images: ["/logo.png"],
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Ghaffar Enterprises",
+      },
+    ],
   },
 };
 

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ghaffar-media-aaqeb11s-projects.vercel.app"),
+  metadataBase: new URL("https://ghaffarenterprises.com/"),
   title: "Ghaffar Enterprises",
   description:
     "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar, encompassing a diverse portfolio of companies focused on innovation, integrity, and impact. Our companies span lead generation, real estate, media, coaching, and more, all working together to empower businesses and individuals to achieve growth and success. At Ghaffar Enterprises, we are committed to delivering exceptional value and building a brighter future.",

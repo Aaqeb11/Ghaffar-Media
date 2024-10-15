@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo.png",
-        width: 1200,
+        width: 1500,
         height: 630,
         alt: "Ghaffar Enterprises",
       },

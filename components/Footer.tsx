@@ -71,6 +71,13 @@ export const Footer = () => {
           . All Rights Reserved.
         </span>
       </div>
+      <a
+        className="absolute bottom-0 right-0 text-black p-3 font-medium"
+        target="_blank"
+        href="https://github.com/Aaqeb11"
+      >
+        Developed by <span className="animate-pulse">~</span>
+      </a>
     </footer>
   );
 };

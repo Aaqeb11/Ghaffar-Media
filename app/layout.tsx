@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo_meta.png",  // Standard aspect ratio for Open Graph
-        width: 800,
-        height: 330,
+        width: 1200,
+        height: 600,
         alt: "Ghaffar Enterprises",
       },
     ],
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo_meta.png",  // Twitter recommended size
-        width: 800,
-        height: 300,
+        width: 1200,
+        height: 600,
         alt: "Ghaffar Enterprises",
       },
     ],

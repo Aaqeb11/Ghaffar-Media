@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import gradient from "../public/gradient.png";
 // import video from "../public/video.jpeg";
 import { Clients } from "@/data/Clients";
 import dynamic from "next/dynamic";

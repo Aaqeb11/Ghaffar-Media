@@ -49,3 +49,22 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>
+        <NavBar />
+        {children}
+      </body>
+    </html>
+  );
+}
+{
+  /* <meta property="og:image" content="Link preview image URL"></meta> */
+}

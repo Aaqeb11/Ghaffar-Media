@@ -13,19 +13,19 @@ export const metadata: Metadata = {
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
-        url: "/logo-1200x630.png",  // Standard aspect ratio for Open Graph
+        url: "/logo_meta.png",  // Standard aspect ratio for Open Graph
         width: 1200,
         height: 630,
         alt: "Ghaffar Enterprises",
       },
       {
-        url: "/logo-1600x440.png",  // Original image
+        url: "/logo_meta.png",  // Original image
         width: 1600,
         height: 440,
         alt: "Ghaffar Enterprises",
       },
       {
-        url: "/logo-1200x600.png",  // Twitter recommended size
+        url: "/logo_meta.png",  // Twitter recommended size
         width: 1200,
         height: 600,
         alt: "Ghaffar Enterprises",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
-        url: "/logo-1200x600.png",  // Twitter recommended size
+        url: "/logo_meta.png",  // Twitter recommended size
         width: 1200,
         height: 600,
         alt: "Ghaffar Enterprises",

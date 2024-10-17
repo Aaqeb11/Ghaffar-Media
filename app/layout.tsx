@@ -15,13 +15,13 @@ export const metadata: Metadata = {
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
-        url: new URL("/logo.png", baseUrl).toString(),
-        width: 1200,
-        height: 1200,
+        url: new URL("/logo_meta.png", baseUrl).toString(),
+        width: 800,
+        height: 800,
         alt: "Ghaffar Enterprises Square Logo",
       },
       {
-        url: new URL("/logo.png", baseUrl).toString(),
+        url: new URL("/logo_meta.png", baseUrl).toString(),
         width: 1200,
         height: 630,
         alt: "Ghaffar Enterprises Rectangle Logo",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
-        url: new URL("/logo.png", baseUrl).toString(),
-        width: 1200,
-        height: 1200,
+        url: new URL("/logo_meta.png", baseUrl).toString(),
+        width: 800,
+        height: 800,
         alt: "Ghaffar Enterprises Square Logo",
       },
     ],

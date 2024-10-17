@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       {
         url: new URL("/logo_meta.png", baseUrl).toString(),
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Ghaffar Enterprises Rectangle Logo",
       },
     ],

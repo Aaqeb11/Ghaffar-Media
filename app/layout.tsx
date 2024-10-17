@@ -2,8 +2,10 @@ import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import "./globals.css";
 
+const baseUrl = "https://ghaffarenterprises.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ghaffarenterprises.com/"),
+  metadataBase: new URL(baseUrl),
   title: "Ghaffar Enterprises",
   description:
     "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
@@ -13,14 +15,20 @@ export const metadata: Metadata = {
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
-        url: "/logo_meta.png",  // Standard aspect ratio for Open Graph
+        url: new URL("/logo_meta.png", baseUrl).toString(),
         width: 1200,
-        height: 600,
-        alt: "Ghaffar Enterprises",
+        height: 1200,
+        alt: "Ghaffar Enterprises Square Logo",
+      },
+      {
+        url: new URL("/logo_meta.png", baseUrl).toString(),
+        width: 1200,
+        height: 630,
+        alt: "Ghaffar Enterprises Rectangle Logo",
       },
     ],
     type: "website",
-    url: "https://ghaffarenterprises.com/",
+    url: baseUrl,
   },
   twitter: {
     card: "summary_large_image",
@@ -29,15 +37,14 @@ export const metadata: Metadata = {
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
-        url: "/logo_meta.png",  // Twitter recommended size
+        url: new URL("/logo_meta.png", baseUrl).toString(),
         width: 1200,
-        height: 600,
-        alt: "Ghaffar Enterprises",
+        height: 1200,
+        alt: "Ghaffar Enterprises Square Logo",
       },
     ],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -52,7 +59,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
-{
-  /* <meta property="og:image" content="Link preview image URL"></meta> */
 }

@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: new URL("/logo_meta.png", baseUrl).toString(),
-        width: 800,
-        height: 800,
+        width: 300,
+        height: 300,
         alt: "Ghaffar Enterprises Square Logo",
       },
       {
         url: new URL("/logo_meta.png", baseUrl).toString(),
-        width: 1200,
-        height: 630,
+        width: 300,
+        height: 300,
         alt: "Ghaffar Enterprises Rectangle Logo",
       },
     ],
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: new URL("/logo_meta.png", baseUrl).toString(),
-        width: 800,
-        height: 800,
+        width: 300,
+        height: 300,
         alt: "Ghaffar Enterprises Square Logo",
       },
     ],

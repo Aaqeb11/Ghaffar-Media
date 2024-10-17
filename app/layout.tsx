@@ -7,12 +7,8 @@ const baseUrl = "https://ghaffarenterprises.com/";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: "Ghaffar Enterprises",
-  description:
-    "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
   openGraph: {
     title: "Ghaffar Enterprises",
-    description:
-      "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
         url: new URL("/logo_meta.png", baseUrl).toString(),
@@ -33,8 +29,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ghaffar Enterprises",
-    description:
-      "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
         url: new URL("/logo_meta.png", baseUrl).toString(),

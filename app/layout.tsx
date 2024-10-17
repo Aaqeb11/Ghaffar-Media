@@ -2,7 +2,7 @@ import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import "./globals.css";
 
-const baseUrl = "https://ghaffarenterprises.com";
+const baseUrl = "https://ghaffar-media-aaqeb11s-projects.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
-        url: new URL("/logo.png", baseUrl).toString(),
+        url: new URL("/logo_meta.png", baseUrl).toString(),
         width: 1200,
         height: 1200,
         alt: "Ghaffar Enterprises Square Logo",
       },
       {
-        url: new URL("/logo.png", baseUrl).toString(),
+        url: new URL("/logo_meta.png", baseUrl).toString(),
         width: 1200,
         height: 630,
         alt: "Ghaffar Enterprises Rectangle Logo",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Ghaffar Enterprises is a multi-faceted organization founded by Abdullah Ghaffar...",
     images: [
       {
-        url: new URL("/logo.png", baseUrl).toString(),
+        url: new URL("/logo_meta.png", baseUrl).toString(),
         width: 1200,
         height: 1200,
         alt: "Ghaffar Enterprises Square Logo",

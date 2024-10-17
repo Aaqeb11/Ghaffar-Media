@@ -2,7 +2,7 @@ import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
 import "./globals.css";
 
-const baseUrl = "https://ghaffarenterprises.com/";
+const baseUrl = "https://ghaffar-media-aaqeb11s-projects.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
